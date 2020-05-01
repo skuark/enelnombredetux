@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from www.enelnombredetux.com/article.php?article=codetip&#38 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 05 Feb 2017 18:10:58 GMT -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="alternate" type="application/rss+xml" title="eendt blog RSS feed" href="http://feeds.feedburner.com/eendtblog" />
+	<title>﻿¿Código limpio? Sí, por favor &bull; Artículos &bull; En el Nombre de Tux</title>
+	<link rel="stylesheet" href="templates/default/style.css" type="text/css" media="screen" />
+	<link rel="shortcut icon" href="templates/default/images/favicon.ico" />
+	<script type="text/javascript" src="includes/js/mootools.js"></script>
+	<script type="text/javascript" src="includes/js/validatecontactform.js"></script>
+	</head>
+<body>
+<div id="all">
+	<div id="header">
+		<div align="right"><a href="index.html"><img src="templates/default/images/cabecera.png" alt="Cabecera" /></a></div>
+	</div>
+	<div id="menu">
+		<ul>
+			<li><a class="off" href="index0128.html?section=Portada">Portada</a></li>
+			<li><a class="off" href="index26e2.html?section=Blog">Blog</a></li>
+			<li><a class="off" href="indexf7f9.html?section=Proyectos">Proyectos</a></li>
+			<li><a class="off" href="indexf6dd.html?section=Art%c3%adculos">Artículos</a></li>
+			<li><a class="off" href="indexc34d.html?section=Licencia">Licencia</a></li>
+			<li><a class="off" href="indexc77a.html?section=Contactar">Contactar</a></li>
+		</ul>
+	</div>
+	<div id="content">
+<h1>¿Código limpio? Sí, por favor</h1><p style="text-align:right; font-size:0.8em; color:#898989;"><strong>Autor/es:</strong> Jesús R. Peinado<br/><a class="changemodeurl" href="article5ca6.html?article=codetip&amp;mode=accordion">Ver texto en modo acordeón</a></p>﻿	<h2 class="titulo">La limpieza del código</h2>
+	<div class="contenido">
+
+	
+	<p>Para todos aquellos que hemos programado o tocado código de cualquier tipo, debería ser una prioridad mantener el código limpio, además de documentado y comentado debidamente (sobretodo en hojas de estilos esto es más que necesario para estructurar el archivo).</p>
+<p>Esta limpieza de código es automática con un buen estilo de programación y diseño siguiendo ciertos consejos, que siendo justos son a menudo específicos para cada lenguaje y tecnología.</p>
+<p>En concreto hoy tengo doce consejos básicos para mantener nuestro código <a href="http://es.wikipedia.org/wiki/Código_HTML" target="_blank">HTML</a> y<a href="http://es.wikipedia.org/wiki/Hojas_de_estilo_en_cascada" target="_blank"> CSS </a>limpio, cortesía de <a href="http://www.smashingmagazine.com/2008/11/12/12-principles-for-keeping-your-code-clean/" target="_blank">Smashing Magazine</a>. Os traduzco y explico un poco estos consejos:</p>
+<h2><span style="text-decoration: underline;">1. Usar cabecera "Strict DOCTYPE"</span></h2>
+<blockquote>
+<p style="padding-left: 90px;"><span style="color: #808080;">Si vas a usar la cabecera DOCTYPE, asegúrate de hacerlo bien. No es necesario discutir si usar HTML 4.0 o XHTML 1.0: ambos ofrecen una versión estricta STRICT que nos asegurará una correción suficientemente honesta en nuestro código.</span></p>
+</blockquote>
+<p>El <a href="http://www.w3.org/QA/2002/04/valid-dtd-list.html" target="_blank">DOCTYPE</a> (<span style="color: #800000;"><strong>Document type declaration- DTD</strong></span>) es una cabecera que la <a href="http://www.w3c.es/" target="_blank"><span style="color: #800000;">W3C</span></a> recomienda usar para cada documento html. Indica tanto la referencia de como se sirve el documento ( text/html ) además de la versión del lenguaje usado para su implementación (<span style="color: #808080;">HTML v4.1, v3.0, etc; o bien xHTML v1.0, v1.1, etc</span>).</p>
+<p>Existen dos tipos de DOCTYPE: <strong><span style="color: #800000;">Strict y Transitional</span></strong>. Mientras que los Strict mantienen una corrección absoluta del lenguaje (x)HTML, los Transitional permiten el uso de ciertos elementos del lenguaje ya desfasados. El problema viene aquí: se han venido usando indiscriminadamente los DTD Transitional, cuando estos no garantizan realmente la correción del texto.</p>
+<p>Pongamos un ejemplo: uno de los elementos desfasados que los Transitional DTD permiten son las tablas. Pero pensemos con claridad: ¿para que usar tablas, si podemos maquetar en CSS lo mismo de un modo correcto?</p>
+<p>Por esto: dejemos de usar DOCTYPE transitional, si podemos usar un DTD Strict.</p>
+<address><span style="color: #808080;">Un estudio de este tema en profundidad en <a href="http://www.alistapart.com/stories/doctype/" target="_blank">AListApart</a>, para aquel que quiera ampliar este tema y sus correspondientes justificaciónes (en inglés).</span><br />
+</address>
+<h2><span style="text-decoration: underline;">2. Usemos los caracteres especiales codificados</span></h2>
+<p>En la cabecera de sección, lo primero que hacemos debe ser declarar la codificación de los caracteres que usaremos. Es decir, si usamos <a href="http://en.wikipedia.org/wiki/UTF-8" target="_blank">UTF8</a>, declaremoslo con:</p>
+<blockquote>
+<div class="example" style="padding-left: 30px;"><span style="color: #808080;"><code>&lt;meta http-equiv="Content-Type" content="text/html;charset=utf-8" &gt;</code></span></div>
+</blockquote>
+<p><span style="color: #000000;">Del mismo modo si usasemos, por ejemplo, <span style="color: #800000;"><strong><a href="http://es.wikipedia.org/wiki/Unicode" target="_blank">Unicode</a> ISO 10646.</strong></span> </span></p>
+<p>Igual de importante es el hecho de usar los caracteres especiales de un modo estricto. Esto es: si usamos un símbolo "<strong>&amp;</strong>" (<a href="http://es.wikipedia.org/wiki/&amp;" target="_blank">Ampersand</a> se llama en inglés, en realidad una derivación de la palabra francesa <strong><span style="color: #800000;">"et"</span></strong>, es decir, "y"), deberemos usar no el simbolo por sí mismo, si no "<strong>&amp;amp;</strong>". Del mismo modo, el caracter "<strong>á</strong>" sería "<strong>&amp;aacute;</strong>". Podemos encontrar una lista bastante completa en <a href="http://www.ascii.cl/es/codigos-html.htm" target="_blank">ascii.cl</a>, además de un recurso imprescindible: <strong><a href="http://www.ascii-code.com/" target="_blank">www.ascii-code.com.</a></strong></p>
+<p>Un detalle: si incluimos en nuestro <strong>&lt;title&gt;</strong> alguno de estos caracteres especiales, declarad el <strong>&lt;meta ... charset:...&gt;</strong> antes del &lt;title&gt;.</p>
+<p class="example">
+<h2><span style="text-decoration: underline;">3. Indentación adecuada</span></h2>
+<p>La <a href="http://es.wikipedia.org/wiki/Indentación" target="_blank"><span style="color: #800000;"><strong>indentación</strong></span></a> es la acción de mover bloques de texto hacia la derecha usando espacios o tabulaciones, lo que comunmente se llama sangrado, para ordenar el código según sentencias.</p>
+<p>Ejemplo de lo que no se debe hacer:</p>
+<p><img class="size-medium wp-image-136 alignnone" title="identamal" src="http://blog.jesusr.es/wp-content/identamal-300x127.jpg" alt="" width="297" height="125" /></p>
+<p>Y esto, como debería quedar el código, bien indentado:</p>
+<p><img class="size-medium wp-image-137 alignnone" title="identabien" src="http://blog.jesusr.es/wp-content/identabien-300x104.jpg" alt="" width="325" height="130" /></p>
+<p>Puede parecer para algunos una tontería y para otros algo obvio. El problema de todo esto es que a menudo lo dejamos de lado, tomándolo por algo sin importancia, pero la mejor forma de comprender un código de un vistazo es esta, lo cual le da una gran importancia.</p>
+<h2><span style="text-decoration: underline;">4. Mantén tu CSS y Javascript fuera del archivo principal</span></h2>
+<p>A menudo, por rapidez y dejadez dejamos fragmentos de código CSS entre etiquetas <a href="http://www.w3.org/TR/REC-html40/present/styles.html" target="_blank">&lt;style&gt;</a> y trozos de código <a href="http://es.wikipedia.org/wiki/Javascript" target="_blank">Javascript</a> entre &lt;script&gt;. Esto hace que nuestro código quedé con parches fuera de lugar, y corrientemente, carguemos varias veces las mismas funciones o estilos, cuando podriamos cargarlos una sola vez, quedando en caché y acelerando un poco más la carga de nuestras páginas.</p>
+<p>Por ello, la práctica más correcta es:</p>
+<blockquote>
+<p style="padding-left: 60px;"><span style="color: #808080;"><a name="ex1"><code class="html">&lt;LINK REL=StyleSheet HREF="style.css" TYPE="text/css" MEDIA=screen&gt;</code></a></span></p>
+</blockquote>
+<blockquote>
+<p style="padding-left: 60px;"><span style="color: #808080;">&lt;script type="text/<em>javascript</em>" src="nombre.<em>js</em>"&gt;&lt;/script&gt;</span></p>
+<p style="padding-left: 60px;">
+</blockquote>
+<h2><span style="text-decoration: underline;">5. Anida las etiquetas correctamente</span></h2>
+<p>Las etiquetas <span style="color: #800000;"><strong>&lt;a&gt; y &lt;h1&gt;</strong></span> (igualmente &lt;h2&gt;, &lt;h3&gt;, etc) suelen usarse unidas; es decir, suele verse un texto al que se aplica al mismo tiempo tanto un &lt;a&gt; como un &lt;h1&gt;. El problema es que a menudo suele verse lo siguiente:</p>
+<blockquote>
+<p style="padding-left: 90px;"><span style="color: #808080;">&lt;a href="./"&gt;&lt;h1&gt;Ejemplo&lt;/h1&gt;&lt;/a&gt;</span></p>
+</blockquote>
+<p>Bien, en este ejemplo, el error es el siguiente: &lt;a&gt; es lo que se llama "<a href="http://htmlhelp.com/reference/html40/inline.html" target="_blank">inline element</a>", que quiere decir que es un elemento que solo puede contener texto, mientras que &lt;h1&gt; es un "<a href="http://htmlhelp.com/reference/html40/block.html" target="_blank">block element</a>", es decir, un componente que puede contener y aglomerar otros elementos, no solo texto. Por tanto, incurrimos en un error de base: un &lt;a&gt; no podrá nunca contener un elemento, de modo que la forma claramente correcta sería:</p>
+<blockquote>
+<p style="padding-left: 90px;"><span style="color: #808080;">&lt;h1&gt;&lt;a href="./"&gt;Ejemplo&lt;/a&gt;&lt;/h1&gt;</span></p>
+</blockquote>
+<h2><span style="text-decoration: underline;">6. Elimina los div innecesarios</span></h2>
+<p>Los <a href="http://www.w3.org/TR/REC-html40/struct/global.html#edef-DIV" target="_blank">divs</a>, esos elementos de bloque tambien llamados capas, nos facilitan hasta el extremo la maquetación web unida con CSS. Pero, para ser exactos, a veces tambien abusamos de ellos para agrupar de alguna forma ciertos elementos de forma innecesaria.</p>
+<p>Un artículo en <a href="http://csscreator.com/?q=divitis" target="_blank">CssCreator explica esta tendencia</a> y unas buenas maneras de maquetación de forma detallada. Quizás más adelante traduzca éste y otros artículos.</p>
+<h2><span style="text-decoration: underline;">7. Usa una convención de nombres mejor</span></h2>
+<p>Vale, el epígrafe por sí mismo no se entiende, pero es fácilmente entendible. Cuando tenemos que nombrar clases o elementos, necesitamos una convención o regla para nombrar siempre de una determinada manera nuestros elementos, y así siempre poder comprender qué significa cada nombre.</p>
+<p>Pero a menudo caemos en un error muy extendido, y es el nombrar las cosas teniendo en cuenta el aspecto que tiene: por tamaño, por color, por tipografía. Pero este aspecto es variable, en un futuro cambiariamos los atributos de la clase y este aspecto variaría y no se correspondería con el nombre que se le ha dado. Por eso siempre hay que darle un nombre que corresponda a su estructura o finalidad dentro de la maquetación, que es algo que no variará.</p>
+<p>Por tanto, los nombres que no debemos usar son por ejemplo: roundedBox, boldBoxText, etc. Sin embargo, nombres como sidebar, footer, mainNav, header, etc, serán correctos.</p>
+<p><strong>Más:</strong></p>
+<ul>
+<li><a href="http://woork.blogspot.com/2008/11/css-coding-semantic-approach-in-naming.html">CSS coding: semantic approach in naming convention</a></li>
+<li><span id="title-text"><a href="http://www.ja-sig.org/wiki/display/UPC/CSS+Naming+Conventions">CSS Naming Conventions </a></span></li>
+</ul>
+<h2><span style="text-decoration: underline;">8. Deja la tipografía para el CSS</span></h2>
+<p>Sabemos que siempre debemos dar estilo a nuestro texto mediante css, al igual que la estructura. Pero lo que a veces no sabemos es que incluso el poner todo un texto en mayusculas, ("<a href="http://en.wikipedia.org/wiki/All_caps" target="_blank">all caps</a>" o "all capitals"lo llaman en inglés), puede y debe hacerse en CSS mediante el atributo text-transform y el valor uppercase.s</p>
+<p>Es decir, en lugar de poner:</p>
+<blockquote>
+<p style="padding-left: 120px;"><span style="color: #808080;">&lt;h1&gt;INICIO&lt;h1&gt;</span></p>
+<p style="padding-left: 60px;">Pondremos:</p>
+<p style="padding-left: 120px;"><span style="color: #808080;">&lt;h1&gt;INICIO&lt;h1&gt;</span></p>
+<p style="padding-left: 60px;">y en el CSS:</p>
+<p style="padding-left: 120px;"><span style="color: #808080;">h1 {</span></p>
+<p style="padding-left: 150px;"><span style="color: #808080;">text-transform: uppercase;</span></p>
+<p style="padding-left: 120px;"><span style="color: #808080;">}</span></p>
+</blockquote>
+<h2><span style="text-decoration: underline;">9. Da una clase o identificador al &lt;body&gt;</span></h2>
+<p>Aplicar una clase o una identificación al &lt;body&gt; tiene una utilidad muy amplia en cuanto al uso de distintos estilos de contenido en distintas páginas de un mismo sitio o portal.</p>
+<p>De este modo, se haría: &lt;body class=???blogLayout???&gt; que aplicaría a todos los div, una clase o indentificación y una serie de atributos.</p>
+<p><strong>Más:</strong></p>
+<ul>
+<li><a href="http://css-tricks.com/id-your-body-for-greater-css-control-and-specificity/">ID Your Body For Greater CSS Control and Specificity</a></li>
+<li><a href="http://www.37signals.com/svn/archives2/case_study_reusing_styles_with_a_body_class.php">Case study: Re-using styles with a body class</a></li>
+</ul>
+<h2><span style="text-decoration: underline;">10. Validación</span></h2>
+<p>Debemos mantener nuestros proyectos validados a nivel de código y deberán pasar los test de (x)HTML y de CSS que nos facilita la W3C.</p>
+<p><strong>Más:<br />
+</strong></p>
+<ul>
+<li><a href="http://validator.w3.org/">Servicio de Validación de Código del W3C<br />
+</a></li>
+<li><a href="http://xhtml-css.com/">Validación XHTML-CSS</a></li>
+</ul>
+<h2><span style="text-decoration: underline;">11. Ordena de forma lógica </span></h2>
+<p>El código debe ordenarse de una forma, como digo, lógica. ¿Que sentido tendría que en el código el "footer" o pie de página, estuviera declarado antes que una barra lateral "sidebar"? Ninguno. Es por esto que debemos ordenar el código según vaya apareciendo en nuestra maquetación.</p>
+<h2><span style="text-decoration: underline;">12. Haz lo que puedas</span></h2>
+<p>Esto es: si no sabes por donde empezar a solucionar estos problemas en páginas ya realizadas, si usas un CMS que te fuerza a tener alguna mala costumbre aplicada al código, etc, no te preocupes. Cuando se trata de aplicar este tipo de consejos a proyectos ya realizados, pensar en esto es mucho mas dificil.</p>
+<p>Lo importante es que asumas y aprendas este tipo de consejos y en el futuro lo apliques en tus proyectos. Escribir código limpio es mucho más facil que limpiar uno ya sucio.</p>
+<p>Por eso, ¡Cuida tu código, y aprende buenas maneras!</p>
+<ul>
+<li>Basado en el artículo en inglés de <a href="http://www.smashingmagazine.com/2008/11/12/12-principles-for-keeping-your-code-clean/" target="_blank">SmashingMagazine</a></li>
+</ul>
+
+	</div>
+</div>
+
+	</div>
+	<div id="footer">
+		<small><a href="index.html">En el Nombre de Tux</a> &bull; <a href="indexe61b.html?section=QuienesSomos">Quienes somos</a> &bull; <a href="index733c.html?section=FAQ">FAQ</a></small><br />
+		<p>
+			<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/"><img alt="Creative Commons License" style="border:0;" src="templates/default/images/cc.png"/></a>
+			<a href="http://validator.w3.org/check?uri=referer"><img style="border:0;width:88px;height:31px" src="templates/default/images/vxhtml.png" alt="XHTML Válido" /></a>
+			<a href="http://jigsaw.w3.org/css-validator/check?uri=referer"><img style="border:0;width:88px;height:31px" src="templates/default/images/vcss.gif" alt="CSS Válido" /></a>
+		</p>
+	</div>
+</div>
+<!-- Google Analytics -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' 
+type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-1625957-5");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<!-- Fin Google Analytics -->
+</body>
+
+<!-- Mirrored from www.enelnombredetux.com/article.php?article=codetip&#38 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 05 Feb 2017 18:10:58 GMT -->
+</html>
+

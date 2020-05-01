@@ -1,0 +1,413 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from www.enelnombredetux.com/project.php?project=pgp by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 05 Feb 2017 18:11:22 GMT -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="alternate" type="application/rss+xml" title="eendt blog RSS feed" href="http://feeds.feedburner.com/eendtblog" />
+	<title>Seguridad, correo electrónico y PGP &bull; Proyectos &bull; En el Nombre de Tux</title>
+	<link rel="stylesheet" href="templates/default/style.css" type="text/css" media="screen" />
+	<link rel="shortcut icon" href="templates/default/images/favicon.ico" />
+	<script type="text/javascript" src="includes/js/mootools.js"></script>
+	<script type="text/javascript" src="includes/js/validatecontactform.js"></script>
+	</head>
+<body>
+<div id="all">
+	<div id="header">
+		<div align="right"><a href="index.html"><img src="templates/default/images/cabecera.png" alt="Cabecera" /></a></div>
+	</div>
+	<div id="menu">
+		<ul>
+			<li><a class="off" href="index0128.html?section=Portada">Portada</a></li>
+			<li><a class="off" href="index26e2.html?section=Blog">Blog</a></li>
+			<li><a class="off" href="indexf7f9.html?section=Proyectos">Proyectos</a></li>
+			<li><a class="off" href="indexf6dd.html?section=Art%c3%adculos">Artículos</a></li>
+			<li><a class="off" href="indexc34d.html?section=Licencia">Licencia</a></li>
+			<li><a class="off" href="indexc77a.html?section=Contactar">Contactar</a></li>
+		</ul>
+	</div>
+	<div id="content">
+<div class="cab" style="width: 960px; height: 200px; margin: 30px 0 0 0; background: url('content/proyectos/pgp/images/projectlogo.jpg');"></div><p style="text-align:right; font-size:0.8em; color:#898989;"><strong>Autor/es:</strong> Jesús R. Peinado, Luis Carlos Mateos<br /><strong>Última revisión:</strong> Febrero de 2008<br/><a class="changemodeurl" href="projected1f.html?project=pgp&amp;mode=accordion">Ver texto en modo acordeón</a></p>	<h2 class="titulo">Protocolos</h2>
+	<div class="contenido">
+		<h3>Recepción</h3>
+
+<p>Dentro de los protocolos de recepción de correo electrónico encontramos dos que prevalecen: IMAP y POP3. Tanto uno como otro tiene sus ventajas y desventajas, y ambos están comunmente soportados en casi todos los servidores y clientes de correo.</p>
+
+<dir><h4>Post Office Protocol</h4></dir>
+
+<p>El protocolo Post Office Protocol (POP) es un protocolo a nivel de aplicación que se ocupa de la recepción del correo electrónico. En su versión más reciente, POP3, es el protocolo más popular en materia de recepción de correo-e. POP3 permite el acceso a los mensajes por medio de conexiones intermitentes que descarguen el contenido de su buzón de entrada, para así permitir su visión y manipulación sin necesidad de mantener una conexión activa. </p>
+
+<p>El protocolo POP, como muchos protocolos clásicos de internet, no soportaba el uso de autentificación encriptada y segura. Sin embargo, hoy en día POP3 soporta múltiples métodos de autentificación segura no nativos que permiten varios niveles de protección contra el acceso ilegitimo al correo electrónico de los usuarios. Uno de estos métodos, APOP, usa la función hash MD5 como un medio para evitar la repetición de los ataques contra la autentificación segura del correo electrónico. Muchos clientes de correo electrónico incluyen APOP como una de sus ventajas en cuanto a seguridad, como por ejemplo Mozilla Thunderbird, Opera, KMail, Evolution o Eudora. Los clientes de POP3 pueden soportar igualmente los métodos de autentificación SASL (Simple Authentification and Security Layer). Igualmente, los clientes de email puede encriptar su tráfico de datos de POP3 usando TLS (Transport Layer Security) o SSL (Secure Socket Layer). POP3 trabaja sobre el protocolo TCP/IP usando TCP en el puerto de red 110.</p>
+
+<dir><h4>IMAP</h4></dir>
+
+<p>El protocolo Internet Message Access Protocol, actualmente en su versión 4 y llamado anteriormente Internet Mail Access Protocol o Interactive Mail Access Protocol es un protocolo de nivel de aplicación operativo en el puerto 143 que permite a un cliente local acceder al correo electrónico alojado en un servidor remoto. IMAP, en contraposición a POP3, soporta el modo desconectado y el modo conectado para el visionado y manipulación del correo electrónico.</p>
+
+<p>Comúnmente, el hecho de usar el modo conectado implica que generalmente IMAP deje los mensajes en el servidor aunque sean descargados, para así poder acceder a ellos online de nuevo, a no ser que específicamente, el usuario desee borrarlos. Esta característica hace que un mismo buzón de correo-e pueda ser usado por varios usuarios a la vez. La idea del protocolo IMAP es mantener siempre un respaldo de almacenamiento del correo electrónico en el servidor de correo-e, mientras que las copias descargadas localmente sean contempladas como simples copias temporales. </p>
+
+<p>En cuanto a la seguridad y la autentificación, IMAP soporta por sí mismo mecanismo nativos de cifrado. Igualmente la transmisión de contraseñas por medio de texto plano está permitida y soportada. </p>
+
+   <h3>Envío</h3>
+<p>Los protocolos de envío de correo electrónico están muchos menos desarrollados, por lo que las opciones se reducen a una:</p>
+
+<dir><h4>SMTP</h4></dir>
+
+<p>En cuanto a los protocolos de envío de correo electrónico, todo gira en torno al protocolo SMTP. Este Simple Mail Transfer Protocol, o "protocolo simple de transferencia de correo", es un protocolo de red basado en texto usado para el intercambio de correo electrónico entre computadoras y/u otros dispositivos. SMTP, al igual que POP3, es uno de esos protocolos clásicos que no soportan la autentificación segura. Pero, del mismo modo que POP3 tiene a APOP y a otras para extender la función de autentificación, SMTP tiene a SMTP-AUTH, un componente que facilita, soporta e implementa las órdenes necesarias para una autentificación segura del emisor.</p>
+	</div>
+	
+	<h2 class="titulo">Técnicas de seguridad: TSL/SSL</h2>
+	<div class="contenido">
+		<p>Transport Layer Security (TLS) y su predecesor, Secure Sockets Layer (SSL), son protocolos criptográficos que ofrecen comunicaciones seguras a través de internet en ámbitos como navegación, correo electrónico, fax a través de internet, mensajería instantánea y otras transmisiones de datos. Aunque haya amplias diferencias entre los protocolos TSL y SSL, su funcionamiento es básicamente el mismo.</p>
+    <p>El protocolo TSL permite a las aplicaciones comunicarse a través de redes por medio de un camino diseñado para prevenir problemas de seguridad como la "escucha oculta" o eavesdropping, u otros muchos métodos de captación de mensajes y paquetes en red. TSL ofrece en definitiva autentificación y comunicación privada en internet, usando métodos criptográficos. Normalmente, solo el servidor esta autentificado mientras que el cliente queda aparte; esto quiere decir que el usuario final (pudiendo ser realmente un usuario o una aplicación) puede estar seguro de con quien está comunicándose. El siguiente nivel de seguridad se conoce como la autentificación mutua. Ésta requiere el empleo una infraestructura de clave pública para clientes sin TLS-PSK (Pre Shared Key) o TLS-SRP (Secure Remote Password) en uso, los cuales ya están cubiertos con una fuerte autentificación mutua sin necesidad de usar una Infraestructura de Clave Publica.</p>
+    
+    <p>TSL comprende tres fases básicas:</p>
+	<ol>
+		<li>Contacto para comprobar el algoritmo a usar: El cliente y el servidor negocian las condiciones de cifrado que se van a usar, el intercambio de claves y los algoritmos de autentificación, así como los códigos de autentificación de mensajes (MAC, Message Authentication Code). </li>
+		<li>Intercambio de claves y autentificación: La clave de intercambio y los algoritmos de autentificación son normalmente algoritmos de clave publica, o claves precompartidas TLS-PSK que puedan ser usadas. Una vez autentificado, se crea ya existe el camino seguro de comunicación, que es la finalidad del TLS y se completa con la autentificación y cifrado de los mensajes.</li>
+		<li>Cifrado simétrico y autentificación del mensaje: Los Códigos de autenticación de mensajes (MACs) son creados por funciones hash criptográficas que usan una construcción HMAC (keyed-Hash Message Authentication Code).</li>
+	</ol>
+	<img src="content/proyectos/pgp/images/01.jpg" />
+	<p>Aunque TSL/SSL se monta sobre TCP y da servicio a protocolos como FTP (File Transfer Protocol), SMTP (Simple Mail Transfer Protocol) o NNTP (Network News Transfer Protocol), el uso más corriente del TSL/SSL se basa en la autentificación dentro del protocolo HTTP (HyperText Transfer Protocol) creando así HTTPS (HyperText Transfer Protocol Secure). También encontramos una de las aplicaciones más interesantes de TSL/SSL en relación a comunicaciones seguras y conexiones TCP: la posibilidad de tunelar una red completa, creando redes VPN (Virtual Private Network).</p>
+	
+	</div>
+	
+	<h2 class="titulo">Técnicas de seguridad: PGP</h2>
+	<div class="contenido">
+		<p>PGP ( Pretty Good Privacy )  es una solución software para la protección de la transferencia y autenticación de datos y documentos en internet así como la encriptación y desencriptación de la información digital . Desarrollada a principios de los '90 por Philip Zimmermann. A diferencia de los protocolos TSL/SSL , PGP también protege los datos almacenados en disco.</p>
+
+<p>El problema de ¿por cuantos ordenadores pasa un mensaje de correo electrónico antes de llegar a su destino? fue el detonante para el desarrollo de PGP, que principalmente lo que pretende es ocultar la información a terceros codificándolos en el origen y decodificándolos en el destino.</p>
+
+<p>Esta aplicación se apoya en los fundamentos de la criptografía asimétrica e incluye un sistema que asocia las claves publicas a un usuario determinado. La primera versión de este sistema fue conocido como  "web of trust"  en contraste con el sistema X.509 que usa un enfoque jerárquico basado en certificados y que fue agregado a implementaciones de PGP posteriormente. Las versiones actuales del cifrado PGP incluyen la posibilidad de usar los dos sistemas a través de un servidor que gestiona las claves automáticamente.</p>
+
+<p>Estamos hablando del sistema de encriptación mas utilizado en la actualidad por miles de usuarios en sus comunicaciones. Y esto es debido a que hoy día, no se tiene constancia de que se haya logrado romper una clave PGP.</p>
+
+<h3>Conceptos básicos </h3>
+
+<p>PGP funciona a través de claves. Con este sistema un usuario posee dos claves , una publica y otra privada. Cuando un emisor desee enviar un mensaje cifrado con PGP deberá conocer nuestra clave publica ,de la que debe tener constancia previamente, para poder encriptarlo. Posteriormente el receptor deberá desencriptarlo utilizando para ello una clave privada.</p>
+<p>Para poder entender como PGP es capaz de realizar su labor adecuadamente es necesario conocer de antemano conceptos básicos como el de criptografía de clave publica, privada e híbrida o lo que es lo mismo, criptografía simetrica, asimetrica e híbrida.  </p>
+
+<h3>Criptografía simétrica</h3>
+<p>La criptografía simétrica es un método criptográfico en el que se usa una clave para cifrar y descifrar los mensajes. Este método también es conocido como "criptografía de clave privada".</p>
+<p>
+    ¿Cómo funciona la criptografía simétrica? 
+
+</p>
+<p>En una transmisión, el emisor debe conocer la clave publica del receptor , de modo que antes de emitir el mensaje , cifrara el mensaje usando dicha clave. Al recibir el mensaje, el receptor deberá descifrarlo usando su clave privada. La eficacia del sistema reside en que aun interceptando el mensaje un segundo receptor , este necesitaría conocer la clave privada del receptor principal para poder descifrar el mensaje. Como buen sistema, la importancia reside en la clave y no en el algoritmo.</p>
+<p>Este sistema, como vemos, soluciona los problemas de la criptografía simétrica pero sin embargo : </p>
+<ol><li>El canal para transmitir la clave entre emisor-receptor puede no ser seguro y por tanto ser interceptada la clave necesaria para cifrar y descifrar el mensaje.</li><li>Para cada pareja de emisor - receptor se necesita una clave distinta por lo que para n parejas se necesitan (n*n-1) /2 claves.</li></ol>
+
+<h3>Criptografía asimétrica</h3>
+<p>    La criptografía asimétrica es un método criptográfico en el que cada usuario , a diferencia de la criptografía simétrica, posee un par de claves , una de ellas publica y la otra , privada.  Debido a la innovación que produjo al introducir un sistema de dos claves,  a este método se le llama también "criptografía de clave publica".</p>
+<p>
+    ¿Cómo funciona la criptografía asimétrica? 
+
+</p>
+<p>En una transmisión , emisor y receptor escogen una clave que utilizara el emisor para cifrar y el receptor para descifrar el mensaje. La eficacia del sistema reside en la velocidad con la que se realiza la transacción de cifrar/descifrar el mensaje, dado que exige un costo relativamente bajo para realizar dichas operaciones.</p>
+<p>Los inconvenientes de este sistema son dos:</p>
+<ul><li>Para una misma longitud de clave y mensaje se necesita mayor tiempo de proceso.</li><li>Las claves deben ser de mayor tamaño que las simétricas.</li><li>El mensaje cifrado ocupa más espacio que el original.</li></ul>
+
+<h3>Criptografía híbrida</h3>
+<p>Método criptográfico que surge en respuesta a las deficiencias de la criptografía simétrica y asimétrica. </p>
+<p>
+    ¿Cómo funciona la criptografía híbrida? 
+
+</p>
+<p>La clave de sesión es cifrada con la clave pública, y el mensaje saliente es cifrado con la clave simétrica, todo combinado automáticamente en un sólo paquete. El destinatario usa su clave privada para descifrar la clave de sesión y acto seguido usa la clave de sesión para descifrar el mensaje</p>
+<p>Un sistema de cifrado híbrido no es más fuerte que el de cifrado asimétrico o el de cifrado simétrico de los que hace uso, independientemente de cuál sea más débil. El sistema de clave pública es probablemente la parte más débil de la combinación. Sin embargo, si un atacante pudiera descifrar una clave de sesión, sólo sería útil para poder leer un mensaje, el cifrado con esa clave de sesión. El atacante tendría que volver a empezar y descifrar otra clave de sesión para poder leer cualquier otro mensaje.</p>
+
+	</div>
+	<h2 class="titulo">Algoritmos PGP</h2>
+	<div class="contenido">
+		<p>En cuanto a los algoritmos de cifrado usados en los sistemas PGP y GPG encontramos tres muy representativos: RSA, DSA y ElGammal. (Aclaración: las búsquedas de números primos, que cumplen ciertas ecuaciones, se realizan mediante tests de primalidad).</p>
+		<h3>RSA</h3>
+     <p>El primero de ellos, el más representativo y popular es el algoritmo RSA. Debe su nombre a las iniciales de los nombres de sus creadores: Rivest , Shamir y Adelman, que desarrollaron el algoritmo en 1977, en el Instituto Tecnológico de Massachusetts. En origen, el algoritmo se registró mediante patente en 1983 en EEUU y expiró en 2000. Curiosamente y por motivos burocráticos (la publicación del algoritmo antes de realizar la patente sobre la aplicación), no se pudo patentar de nuevo ni en Estados Unidos ni en el extranjero.
+
+</p>
+     <p>Formalmente, el algoritmo RSA es un sistema criptográfico con clave pública asimétrica responsable de un algoritmo cifrador de bloques. Los mensajes cifrados mediante RSA se representarán siempre mediante números y el funcionamiento se basará en el producto de dos números primos grandes (entendiendo por "número primo grande", números primos mayores de 10100). </p>
+     
+     <dir><h4>Cifrado</h3></dir>
+     <p>Buscando una explicación relativamente simple, podemos decir que, dada una clave privada e y un módulo n, y un mensaje original M (que sufre un cambio por medio de un protocolo llamado padding scheme, del que hablaremos después), calcularemos el mensaje cifrado mediante la fórmula matemática: </p>
+     <p>c = m^e (mod n);</p>
+     <p>siendo c el mensaje cifrado.</p>
+     <p>Podríamos hablar, por tanto, de la función encrypt(m) = m^e(mod n).</p>
+     <dir><h4>Descifrado</h4></dir>
+     <p>Siguiendo los datos del cifrado, el receptor del mensaje cifrado conocerá por tanto c y su clave pública d. El valor m también puede recuperarse a partir de c, mediante la formula:</p>
+     <p>m = c^d (mod n);</p>
+     <p>a partir de lo cual podemos conseguir el mensaje original M, siguiendo con:</p>
+     <p>c^d = m^ed (mod n);</p>
+     <p>Hablaríamos de la función decrypt(c) = c^d(mod n).</p>
+     <dir><h4>Padding schemes</h4></dir>
+     <p>El Padding Scheme, traducido como "Esquema de relleno", es un método de "camuflaje" que se añade a las funcionalidades de encriptación de RSA para ayudar a que la codificación no sea debil ni vulnerable. Básicamente, lo que hace el Padding Scheme es añadir bits de más en el mensaje m de forma que al ser cifrado se camufle el mensaje cifrado junto a los bits añadidos.</p>
+     <h3>DSA</h3>
+     <p>El DSA debe su nombre a un motivo más formal: Digital Signature Algorithm (FIPS PUB 186). Este algoritmo es un estandar de cifrado creado por un organismo tecnológico estadounidense y acatado por el Gobierno Federal de los Estados Unidos de América para las firmas digitales. El algoritmo DSA, que tiene como principal desventaja su mayor tiempo de computo, fue hecho publico en 1991 y su uso se basa en las firmas. </p>
+     <p>Este procedimiento de firma no es reversible, como sí lo es el de cifrado, puesto que el DSA no hace encriptación de clave pública ni nos provee de los mecanismos necesarios de distribución e intercambio de llaves. </p>
+     <p>En el DSA las claves serán resultado de tomar:</p>
+     <ol><li>Dos números primos, cada uno cumpliendo ciertas caracteristicas (p y q, donde p es un número primo cuyo tamaño sea divisible por 64, sea mayor que 512 y menor que 1024 bits, y q es un número primo de 160 bits que cumple p-1 = qz, siendo z un numero natural);</li><li>g = h^z(mod p) &gt; 1, donde h es 1 &lt; h &lt; p-1; </li><li>Tomar x de valor aleatorio 1 &lt; x &lt; q-1.</li></ol>
+     
+     <p>Calcular y = g^x(mod p).</p>
+     
+     <dir><h4>Firma</h4></dir>
+     <p>Teniendo en cuenta que la clave privada corresponde al valor de x:</p>
+     <ol><li>Tomamos un valor de s, 1 &lt; s &lt; q; </li><li>s1 = (g^s mod p)mod q; </li><li>s2 = s^(-1)(H(m)+s1*x)mod q, sabiendo que H(m) es una función hash SHA-1 aplicada al mensaje m.</li></ol>
+     <p>La firma es el par (s1, s2).</p>
+     
+     <dir><h4>Verificación</h4></dir>
+     <p>Teniendo en cuenta que la firma la componen los valores s1 y s2, y que la clave publica la conforman los valores de p, q, g, y; tomar los valores de:</p>
+     <ol><li>w = (s2)^-1 (mod q). </li><li>u1 = H(m) • w(mod q). </li><li>u2 = s1 • w(mod q). </li><li>v = (g^u1 • y^u2 mod p) mod q</li></ol>
+     <p>La firma es válida si v = s1.</p>
+     
+     <h3>ElGamal</h3>
+     <p>El algoritmo de cifrado ElGamal se basa en el algoritmo Diffie-Hellman. Formalmente es un algoritmo de cifrado asimétrico desarrollado en 1984 por Taher Elgamal, cuya seguridad se basa en la dificultad matemática de calcular logaritmos discretos. Es usado además en sistemas GPG Y PGP para el cifrado de mensajes, aunque en origen, su finalidad era el manejo de firmas digitales. </p>
+     <p>La obtencion de claves se basa en la obtencion de un grupo ciclico G de orden q con un generador g, tomando un valor aleatorio x, siendo 0 &lt; x &lt; q-1 y calculando h = gx; por tanto tendremos una clave pública h con sus descriptores G, g, q; y una clave privada x. </p>
+     <dir><h4>Cifrado</h4></dir>
+     <p>Teniendo un mensaje original m, y unas claves privada (x) y publica (G, g, q, h):</p>
+     <ol><li>Se escoge un y aleatorio, 0 &lt; y &lt; q-1 </li><li>Calcula c1 = g^y </li><li>Calcula c2 = m h^y</li></ol>
+     <p>Luego el texto encriptado será el par (c1,c2).</p>
+     <dir><h4>Descifrado</h4></dir>
+     <p>El descifrado de ElGamal se desarrolla así, conociendo el mensaje cifrado (c1, c2), con su clave privada x:</p>
+     <ol><li>Calcular c2/c1^x</li><li>El mensaje original se obtiene a partir de: c2 / c1^x = (m • h^y ) / g^(xy) = (m • g^(xy)) / g^(xy) = m </li></ol>
+     
+     <h3>DES, TripleDES, IDEA y AES</h3>
+     <p>Para empezar a hablar del algoritmo DES hay que remontarse a 1972, cuando es promovido en el seno de la NBS (National Bureau of Standars) de los Estados Unidos. Con la colaboración de la NSA (National Security Agency) y numerosas críticas al proceso, un algoritmo candidato desarrollado por IBM levanta el interes de las agencias estatales. No es hasta 1976 cuando DES se considera suficientemente maduro para ser considero estándar de cifrado.</p>
+     
+     <p>En cuanto al grado de seguridad, DES recibió amplias críticas del público debido en gran parte a dos razones: el tamaño de la clave, el cual la mayoría consideraba demasiado corto; y la intromisión en el desarrollo de la NSA, que provocó que amplios sectores del publico consideraran que el algoritmo había sido debilitado a drede por la NSA para así ser los únicos que pudieran cualquier texto cifrado con DES. No obstante, en 1977 se creó el algoritmo derivado TripleDES, que simplemente se basa en el triple cifrado con distintas claves mediante DES, y ha sido ampliamente utilizado.</p>
+     <p>Más tarde, aparecieron múltiples algoritmos propuestos como herederos de DES, como lo fueron, por ejemplo, IDEA y AES. IDEA (International Data Encryption Algorithm) fue un algoritmo desarrollado por Xuejia Lai and James Massey, que intentaron aumentar la eficiencia y seguridad de DES mediante algunas novedades, como el aumento del espacio de direcciones. AES (Advanced Encryption Standard), que fue el algoritmo que finalmente fue nombrado estándar en EEUU como reemplazo de DES, fue desarrollado por un equipo de estudiantes belgas que basaron su algoritmo en una red de sustitucion-permutacion en lugar de en una red de Feistel como el DES, lo cual hace al AES mas eficiente y rápido a todos los niveles.</p>
+		
+	</div>
+
+	<h2 class="titulo">Operaciones de PGP</h2>
+	<div class="contenido">
+		<p>Hay tres clases de operaciones posibles: encriptación, firma, y firma con encriptación.</p>
+
+    <h3>Encriptación</h3>
+    <p>Como sabemos antes de enviar un documento encriptado, el remitente debe conseguir la clave publica del destinatario. Dicha clave sera utilizada para encriptar el documento. La información solo podra desencriptarse con la clave privada de la pareja de claves, por tanto estaremos seguros de que al documento solo tendra acceso el destinatario. Una anotacion a tener en cuenta es que la información que encriptemos no podremos desencriptarla nosotros mismos puesto que no sabemos la clave privada del receptor. Por tanto como ejemplo de uso que podemos citar es en el envio del numero de tarjeta de credito o cualquier otra información sumamente confidencial, para otros usos no tiene demasiado sentido.</p>
+
+	<p>Texto original:</p>
+	<p>“La Ministra de Chiquitistan acaba de publicar una estadistica en la que 
+se recoje que utilizar ChiquitistanOS X hace mas felices a las personas.
+Investigaron la felicidad de dos millones de personas con el "felicitron2000".
+La mitad eran chiquitistanies que cotidianamente utilizan ordenadores
+con el sistema ChiquitistanOS X. La otra mitad eran escalciadores de sidra
+que nunca habian usado un ordenador. Los que emplean ChiquitistanOS X 
+viven más años y tienen mejor salud que los otros.”
+</p>
+
+	<p>Texto encriptado usando PGP:</p>
+
+	<p><code>-----BEGIN PGP MESSAGE-----<br/>
+Version: PGPfreeware 5.5.3i for non-commercial use <http://www.pgpi.com>
+<br/>
+
+hQCMA6arQCE08evfAQP8CbOMO5vfadHRJo8kwNnM5HHG7C30dWmNxu5CPA+m+LQY
+bJBYFjMQqNK/NPjvkdjqU2mCWPhJa2nSH+X5xuneLfXnXAxzwvjP7w4a/NFILgyo
+VDQzMQScheakDWxScApi4pi/CxfFLVKXOPunFHssJLy5ZcHFWlQfABNuRTI/Gzil
+ARuCla0XDs32A/wvChx2SYlkZnQySzjYehcsRISHXlzkX5H7LoUSgaHW6xW/4tYx
+nN8N3+VBTyZ7Nxa78dEa3AShWRW3F1IvOj+zv8x+l5OwHZsXYotVYl20b2EVUMF5
+bzzkQsFBFt/m4T0Ndg/sFThh7uOGxedBSiV4PrdLO6Wbl92XeLIYI1OHnWAeAkqd
+GOr5lZj+TfJTvLHdVfK+7WpTa/vgaYp1w3pASGNCdnThFlQMn5VCKSgD8d6u5KNX
+Y6l5YRbaXhatqH1io3XLuGzs6M1MskJ/VFCTQLvpxxU74VVkcZ0ebWO/OaX/cDVt
+CbnFphtoAUoe70M0AkgHsxZz1wtSviE8Z/4dJOG8x+maNhPTGw8KBHvH/aDy
+=uA7n
+<br/>
+-----END PGP MESSAGE---
+</code>
+</p>
+
+   <h3>Firma digital</h3>
+    <p>También podemos confirmar si el documento proviene de quien dice remitirlo, ademas de certificar que los contenidos de este no han sido modificados por otras personas. Para lograr tal fin se le pasa un sistema de compresion y dicho documento comprimido se encripta con la clave privada del emisor. Estamos hablando de una firma digital añadida al original antes de enviarlo. Una persona cualquiera puede ver el documento, pero también la firma digital. Esa firma nos garantiza que el contenido original del documento coincide con el que se ha transmitido. Con este sistema conseguimos impedir la modificacion por parte de terceros y que el documento fue firmado con la clave privada del remitente adecuado.</p>
+
+	<p>Texto anterior firmado con PGP:</p>
+	<p><code>
+	-----BEGIN PGP SIGNED MESSAGE-----<br/>
+
+
+La Ministra de Chiquitistan acaba de publicar una estadistica en la que 
+se recoje que utilizar ChiquitistanOS X hace mas felices a las personas.
+Investigaron la felicidad de dos millones de personas con el "felicitron2000".
+La mitad eran chiquitistanies que cotidianamente utilizan ordenadores
+con el sistema ChiquitistanOS X. La otra mitad eran escalciadores de sidra
+que nunca habian usado un ordenador. Los que emplean ChiquitistanOS X 
+viven más años y tienen mejor salud que los otros.<br/>
+
+
+-----BEGIN PGP SIGNATURE-----<br/>
+
+
+versión: PGPfreeware 5.5.3i for non-commercial use <http://www.pgpi.com><br/>
+
+iQCVAwUBNWbZpaarQCE08evfAQHL6wQAsNPP+HamC8i9HVmwwOWgXEy8d69Rcsfi
+t4U8+321MYBt+A3o4sycE06b8dZJ2KuosjYl1T0KJba/oolyeUVBICEEXwAUK7/D
+cUtEzE6Gf8vHfmSn4aE0Ta68RqUYe4aq1lo/yIMbkmxMh5A/7/e9qzN01mwipqQA
+Sz0xh5vzlhs=
+=fkrF<br/>
+
+
+-----END PGP SIGNATURE-----<br/>
+</code>
+</p>
+
+	<p>Vemos como una marca delimita el comienzo del texto firmado , y luego se añaden dos señales mas para acotar la información codificada que lleva la firma digital asociada a ese texto. Dicha firma no aumenta de tamaño debido a la cantidad de información por lo que independientemente del texto de partida , la firma seguira siendo igual de extensa. Esta firma contiene información relativa al momento en el que se hizo la firma. </p>
+	<p>En el caso de no disponer de la clave publica del remitente , PGP no podra validar la firma con todas las dudas que eso conlleva.</p>
+
+    <h3>Firma con encriptación</h3>
+    <p>Esta operacion consiste basicamente en una firma digital combinada con el sistema de encriptación anteriormente descrito.</p>
+
+	<p>Texto (el de antes) al que se le ha aplicado firma y encriptación.</p>
+	<p>“La Ministra de Chiquitistan acaba de publicar una estadistica en la que 
+se recoje que utilizar ChiquitistanOS X hace mas felices a las personas.
+Investigaron la felicidad de dos millones de personas con el "felicitron2000".
+La mitad eran chiquitistanies que cotidianamente utilizan ordenadores
+con el sistema ChiquitistanOS X. La otra mitad eran escalciadores de sidra
+que nunca habian usado un ordenador. Los que emplean ChiquitistanOS X 
+viven más años y tienen mejor salud que los otros.”
+</p>
+
+	<p>Texto encriptado usando PGP:</p>
+
+	<p><code>-----BEGIN PGP MESSAGE-----<br/>
+
+Version: PGPfreeware 5.5.3i for non-commercial use <http://www.pgpi.com><br/>
+
+
+hQCMA6arQCE08evfAQQAgaTgXXYniEUpdOkPba6Qm3PVF5g9oraht9FkyooDENDl
+JH2/gvRENxcGipUsDjrQgXZNkptBwmVHzK/6AsfeLsWaXDZ6+WkyhCFC6jNLXno0
+Mq4Esi7urNXY6f/uBpg3ToROlJV/88zM+dCl1LdGZ2MwzTjjEkKnBAc4ChUgHJml
+Ae0B1HqdvxHGd9hileZ1imF7LgBRs2+zANJhjarAe1c5ytm8v96yK8g+XK9oyDnC
+dmW/tTZ5q3j8/nSIJAWApdb/zHnJKLc1bI8vlTsFQFL36dNDBwLxQ40iYkjB5Ol+
+P7XInWLtUWE0QiuHKfoTeFFcm1w/PzHxFDE356x3e1ttzo+SOss0jo0ANLxRzKHg
+Dd6hR9ujfI6a3VgCO7viRYvfvJgm53Act92r2awJsHCV7KyRbg4Y1aI2NW+HQwSO
+qQSCXgco7g+LdYombHb2FWboHCsmLjkT/9zXBJPpfleugHwghPcHdZc1Hbo9k8Mo
+55mSZzldh+9riGR3uodq08iwGI0SMYfpDRdwbobaq4BJqXuGUU+9nbG2fjM6dVng
+IGhg1cXz39TpMiWW4eIjmZ3B5Lz+799q4OZhIv0mns2lTA1ECIadOwYou/h+NJD0
+hMPKPfV86MvqRdPbCGr5amssv723aVSCBaewwbNHaZM01QU9xKRVoIUGVuTOxp/u
+PxZKdIGSKVwEzKMQZNrxWMxedCTb3bRRY4iAX4YB58k8w1BpFI7eiaVpnqHv18cd
+JVG9/7eDC+TmqsLzzzt0iojbcHtxUrbq/biQUQDVgUHwmcIJmxOzyiQqQSVRBU5E
+IhsJxJy6lIujlq+3s5G8
+=UTPN
+<br/>
+
+-----END PGP MESSAGE-----
+
+</code>
+</p>
+
+   <h3>Descifrado</h3>
+    <p>Cualquiera de las tres operaciones indicadas anteriormente genera un nuevo conjunto de información que también incorpora datos sobre las manipulaciones realizadas. El descifrado es aplicable en todos los casos y de la misma forma, en una sola operación. Si el fichero fué encriptado, se hará automáticamente el desencriptado; si fué firmado, se verificará el remitente y el contenido; si fué firmado y encriptado, el PGP lo percibirá, y operará en consecuencia. Incluso es posible intentar el descifrado de una información que no fué cifrada, ello no supone ningún problema, porque el programa lo detecta antes de manipularlo.</p>
+
+	<p>Hay que insistir en que la desencriptación implica disponer de la llave privada que corresponde con la llave pública usada en la encriptación. Si el destinatario ha perdido su llave privada, nadie podrá recuperar esa información, ni siquiera el remitente.</p>
+	
+	</div>
+	
+	<h2 class="titulo">Enlaces</h2>
+	<div class="contenido">
+<div style="left:40px;">
+									<!-- align --><br><br><br>
+									<p>
+									P&aacute;gina oficial de PGP corporation, <br>
+									<a href="http://www.pgp.com/">http://www.pgp.com/</a>
+									<br><br>
+									P&aacute;gina oficial del Proyecto GPG,<br>
+									<a href="http://www.gnupg.org/">http://www.gnupg.org/</a>
+									<br><br>
+									
+									GPG para plataforma Windows,<br>
+									<a href="http://www.gpg4win.org/">http://www.gpg4win.org/</a>
+									<br><br>
+									
+									PGP. Seguridad del Correo Electr&oacute;nico (MADTSoft), en <br>
+									<a href="http://www.siinet.com/Boletines.asp?Tipo=2&amp;Numero=35">
+									http://www.siinet.com/Boletines.asp?Tipo=2&Numero=35</a>
+									<br><br>
+									
+									&iquest;Por qu&eacute; necesitas PGP? (Phil Zimmermann), en <br>
+									<a href="http://www.pgpi.org/doc/whypgp/es/">http://www.pgpi.org/doc/whypgp/es/</a>
+									<br><br>
+									
+									Criptograf&iacute;a - PGP (Asociaci&oacute;n de internautas), en<br> 
+									<a href="http://seguridad.internautas.org/pgp.php">http://seguridad.internautas.org/pgp.php</a>
+									<br><br>
+									RFC en espa&ntilde;ol, en<br>
+									<a href="http://www.rfc-es.org/">http://www.rfc-es.org/</a>
+									<br><br>
+									'PGP source code' para descarga, en<br>
+									<a href="http://www.pgp.com/downloads/sourcecode/index.html">http://www.pgp.com/downloads/sourcecode/index.html</a>
+									<br><br>
+									GPG para descarga, en<br>
+									<a href="http://www.pgpi.org/download/gnupg/">http://www.pgpi.org/download/gnupg</a>
+									<br><br>
+									<!-- align --><br><br>	
+									</p>		
+								</div>
+  </div>
+
+	<h2 class="titulo">Glosario</h2>
+	<div class="contenido">
+		<p>
+								<strong>AES:</strong> Advanced Encryption Standard, algoritmo concebido como sucesor del 
+								DES, desarrollado por estudiantes belgas y basado en una red de sustitucion-permutacion.<br><br>
+								<strong>APOP</strong>: RFC1939. Authentificated Post Office Protocol. M&eacute;todo de autenticaci&oacute;n 
+								en el uso del protocolo POP, que se basa en la encriptaci&oacute;n de la contrase&ntilde;a de acceso por 
+								medio de funciones MD5.<br><br>
+								<strong>DES</strong>: Data Encryption Standard, algoritmo de encriptaci&oacute;n ampliamente 
+								distribuido y usado, desarrollado y promovido por la NSA en 1976.<br><br>
+								<strong>DSA</strong>: Digital Signature Algorithm, algoritmo de encriptaci&oacute;n usado para firma 
+								electronica. <br><br>
+								<strong>Eavesdropping</strong>: traducido coloquialmente como "escucha secreta". En criptograf&iacute;a 
+								se conoce eavesdropping al atauqe consistente en captar copias de paquetes de comunicaciones ajenas, 
+								tanto encriptadas, como no encriptadas.<br><br>
+								<strong>ElGamal</strong>: algoritmo de encriptaci&oacute;n usado en sistemas PGP, desarrollado por 
+								Taher Elgamal en 1984.<br><br>
+								<strong>GPG </strong>: GNU Privacy Guardian. Aplicaci&oacute;n libre para el des/cifrado de datos.<br><br>
+								<strong>HMAC</strong>: RFC2104. keyed-Hash Message Authentification Code. M&eacute;todo de autentificaci&oacute;n 
+								de mensages por c&oacute;digo, mediante cifrado por funciones hash.<br><br>
+								<strong>IDEA</strong>: International Data Encryption Algorithm, algoritmo de encriptaci&oacute;n 
+								desarrollado por Xuejia Lai and James Massey como mejora al algoritmo DES.<br><br>
+								<strong>IMAP</strong>: RFC3501. Internet Message Access Protocol. Protocolo de recepci&oacute;n de correo 
+								electr&oacute;nico.<br><br>
+								<strong>MAC</strong>: RFC4418. Message Authentification Code. C&oacute;digo de autentificaci&oacute;n de mensaje, 
+								usado en las comunicaciones via TSL/SSL.<br><br>
+								<strong>PGP</strong>: Pretty Good Protection. Aplicaci&oacute;n para el des/cifrado de datos. <br><br>
+								<strong>PSK</strong>: RFC4785. Pre-shared Key. El TSL-PSK es un conjunto de protocolos criptogr&aacute;ficos 
+								que permiten comunicaciones seguras basadas en claves compartidas de antemano. Estas claves son claves 
+								sim&eacute;tricas compartidas entre ambos elementos de la comunicaci&oacute;n, es decir, emisor y receptor.<br><br>
+								<strong>RFC</strong>: "Request for coments" y se traduce como "petici&oacute;n de comentarios". Es un documento 
+								de proposici&oacute;n oficial para un nuevo protocolo, donde se define el est&aacute;ndar y dem&aacute;s. <br><br>
+								<strong>RSA</strong>: Algoritmo de encriptaci&oacute;n usado en sistemas PGP. <br><br>
+								<strong>SMTP</strong>: RFC821. Simple Mail Transfer Protocol. Protocolo de envio de correo electr&oacute;nico.<br><br>
+								<strong>SMTP-AUTH</strong>: RFC2554. Simple Mail Transfer Protocol Authentification. Extension del 
+								protocolo SMTP, cuya &uacute;nica diferencia es la autentificaci&oacute;n seguro de las comunicaciones.<br><br>
+								<strong>SRP</strong>: RFC5054. Secure Remote Password. Protocolo de seguridad basado en autentificacion 
+								segura e intercambio de claves.<br><br>
+								<strong>SSL</strong>: RFC2246. Secure Socket Layer. Protocolo de seguridad de la capa de transporte.<br><br>
+								<strong>TLS</strong>: RFC2246. Transport Layer Security. Protocolo de seguridad de la capa de transporte, 
+								evoluci&oacute;n del SSL.			
+								<!-- align --><br><br><br><br><br><br>
+								</p>
+	</div>
+	</div>
+	<div id="footer">
+		<small><a href="index.html">En el Nombre de Tux</a> &bull; <a href="indexe61b.html?section=QuienesSomos">Quienes somos</a> &bull; <a href="index733c.html?section=FAQ">FAQ</a></small><br />
+		<p>
+			<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/"><img alt="Creative Commons License" style="border:0;" src="templates/default/images/cc.png"/></a>
+			<a href="http://validator.w3.org/check?uri=referer"><img style="border:0;width:88px;height:31px" src="templates/default/images/vxhtml.png" alt="XHTML Válido" /></a>
+			<a href="http://jigsaw.w3.org/css-validator/check?uri=referer"><img style="border:0;width:88px;height:31px" src="templates/default/images/vcss.gif" alt="CSS Válido" /></a>
+		</p>
+	</div>
+</div>
+<!-- Google Analytics -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' 
+type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-1625957-5");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<!-- Fin Google Analytics -->
+</body>
+
+<!-- Mirrored from www.enelnombredetux.com/project.php?project=pgp by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 05 Feb 2017 18:11:22 GMT -->
+</html>
+

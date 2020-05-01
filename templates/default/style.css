@@ -1,0 +1,233 @@
+/*
+	Colores utilizados
+	#ff7815 (naranja oscuro del fondo del menú)
+	#ff4a00 (naranja para sobresaltar enlaces activos del menú)
+*/
+
+/* Diseño General */
+
+body {
+	font-family: sans-serif;
+	font-size: 14px;
+	margin: 0;
+	background: #fff;
+}
+
+#all {
+	margin: auto;
+	max-width: 1024px;
+}
+
+#header {
+	background: #fff;
+}
+
+#header img {
+	border: 0;
+}
+
+#menu {
+	overflow: hidden;
+	height: 100%; /* esto tal vez solucione el problema con IE6 */
+	font-size: 0.8em;
+	background: #ff7815;
+	border-top: 5px solid #000;
+	border-bottom: 2px solid #000;
+}
+
+#menu ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#menu ul li {
+	float: left;
+	padding: 8px 0 8px 0;
+}
+
+#menu ul li a {
+	color: #000;
+	padding: 8px 10px 8px 10px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#menu ul li a:hover {
+	color: #fff;
+	background: #ff4a00;
+	text-decoration: underline;
+}
+
+#menu ul li a.on {
+	color: #fff;
+	background: #ff4a00;
+}
+
+#content {
+	background: #FFFFFF;
+	padding: 10px 32px 10px 32px;
+	text-align: justify;
+	line-height: 1.5em;
+}
+
+#content h1 {
+	padding: 0 0 5px 0;
+	border-bottom: 1px dotted #000;
+	font-variant: small-caps;
+	font-family: serif;
+}
+
+#footer {
+	position: relative;
+	padding: 10px 10px 10px 10px;
+	text-align: center;
+	line-height: 1.3em;
+	background: #fff;
+	border-top: 10px solid #ff7815;
+}
+
+a {
+	color: #444444;
+	font-weight: bold;
+}
+
+/* Secciones partículares */
+
+/* Blog */
+
+#blogmenuicons {
+	overflow: hidden;
+	margin: auto;
+	width: 282px;
+}
+
+#blogmenuicons .icon {
+	float: left;
+	text-align: center;
+	padding: 1px 1px 0 1px;
+}
+
+#blogmenuicons .icon:hover {
+	background: #DDDDDD;
+}
+
+#blogarticles {
+	padding: 0 30px 0 30px;
+}
+
+.blogarticle {
+	margin-bottom: 20px;
+	padding: 20px 20px 5px 20px;
+	background: #eee;
+	border: 1px dashed;
+}
+
+.blogarticle h2 a {
+	text-decoration: none;
+}
+
+.blogarticle h2 {
+	margin: 0;
+	padding: 0;
+	border-bottom: 1px solid #AAAAAA;
+}
+
+/* Formulario de contacto */
+
+form#mail {
+	padding: 2em 6em 2em 6em;
+}
+
+form#mail .req {
+	color: #f00;
+}
+
+form#mail fieldset legend {
+	margin-bottom: 1em;
+	padding: 0;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+form#mail fieldset label {
+	font-weight: bold;
+}
+
+form#mail fieldset {
+	border: 0;
+	margin-bottom: 1em;
+}
+
+form#mail fieldset input, form#mail fieldset textarea {
+	border: 2px solid;
+	font-size: 1.5em;
+	padding: 8px;
+	font-family: sans-serif;
+}
+
+form#mail fieldset input:focus, form#mail fieldset textarea:focus {
+	background: #ddd;
+}
+
+form#mail fieldset span.info {
+	font-size: 0.8em;
+}
+
+/* 404 */
+
+.error {
+	padding: 0 15px 0 15px;
+	border: 2px solid #ff4a00;
+	background: #eee;
+	font-size: 0.8em;
+	text-align: justify;
+	margin: 25px auto 25px auto;
+	width: 500px;
+	line-height: 1.2em;
+}
+
+/* Proyectos y Artículos */
+
+.contenido img {
+	display: block;
+	margin: auto;
+}
+
+/* .imagen deprecated */
+/* Utilizar un simple img y ya saldrá centrado */
+.imagen {
+	text-align: center;
+}
+
+.titulo {
+	border-bottom: 1px solid #ff7815;
+	padding: 3px 5px 3px 5px;
+}
+
+.titulo:hover {
+	background-color: #000;
+	color: #FFF;
+	border-bottom: 1px solid #000;
+	cursor: pointer;
+}
+
+.contenido {
+	padding: 0 10px 0 10px;
+}
+
+h3.titulo {
+	font-weight: lighter;
+	padding: 0 0 0 20px;
+}
+
+.quote {
+	border: 1px solid #000;
+	background: #DDDDDD;
+}
+
+/* nuevo */
+
+a.changemodeurl {
+	font-weight: normal;
+}

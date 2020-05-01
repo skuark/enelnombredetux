@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from www.enelnombredetux.com/article.php?article=oracle&#38 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 05 Feb 2017 18:10:57 GMT -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="alternate" type="application/rss+xml" title="eendt blog RSS feed" href="http://feeds.feedburner.com/eendtblog" />
+	<title>﻿Oracle Designer 3GL &bull; Artículos &bull; En el Nombre de Tux</title>
+	<link rel="stylesheet" href="templates/default/style.css" type="text/css" media="screen" />
+	<link rel="shortcut icon" href="templates/default/images/favicon.ico" />
+	<script type="text/javascript" src="includes/js/mootools.js"></script>
+	<script type="text/javascript" src="includes/js/validatecontactform.js"></script>
+	</head>
+<body>
+<div id="all">
+	<div id="header">
+		<div align="right"><a href="index.html"><img src="templates/default/images/cabecera.png" alt="Cabecera" /></a></div>
+	</div>
+	<div id="menu">
+		<ul>
+			<li><a class="off" href="index0128.html?section=Portada">Portada</a></li>
+			<li><a class="off" href="index26e2.html?section=Blog">Blog</a></li>
+			<li><a class="off" href="indexf7f9.html?section=Proyectos">Proyectos</a></li>
+			<li><a class="off" href="indexf6dd.html?section=Art%c3%adculos">Artículos</a></li>
+			<li><a class="off" href="indexc34d.html?section=Licencia">Licencia</a></li>
+			<li><a class="off" href="indexc77a.html?section=Contactar">Contactar</a></li>
+		</ul>
+	</div>
+	<div id="content">
+<h1>Oracle Designer 3GL</h1><p style="text-align:right; font-size:0.8em; color:#898989;"><strong>Autor/es:</strong> Eugenio Martínez Cámara<br/><a class="changemodeurl" href="articlec85f.html?article=oracle&amp;mode=accordion">Ver texto en modo acordeón</a></p>﻿	<h2 class="titulo">Introducción</h2>
+	<div class="contenido">
+		<p>En el año 2008 cursaba el tercer curso de la titulación de Ingeniería Técnica en Informática de Gestión. El profesor de la asignatura “Bases de Datos 2” propuso varios temas para realizar trabajos voluntarios, siendo una de las temáticas la herramienta 3GL ORACLE DESIGNER. Sin saber en lo que me estaba metiendo, decidí que ese era el trabajo que debía hacer. Tras un mes de esfuerzo, entregué la documentación de la práctica: “Diseño de una aplicación de bases de datos”. Durante la realización de la misma me arrepentí varias veces de mi elección, pero una vez terminada, no hubo más arrepentimiento, porque me sirvió para descubrir una gran herramienta de ingeniería del software. Esto, unido a la escasa documentación sobre DESIGNER en inglés, y todavía menos en español, y en mi opinión, a la gran utilidad de esta herramienta, publico en “En el Nombre de Tux” el extracto de aquella práctica que describe qué es ORACLE DESIGNER, y un detallado manual de instalación.
+</p>
+<p>Se podrá pensar que esta documentación está desfasada, ya que se escribió en el año 2008, pero no lo es, porque la versión de ORACLE DESIGNER no ha cambiado en estos años, continua siendo la 10g.</p>
+	</div>
+	<h2 class="titulo">Oracle Designer</h2>
+	<div class="contenido">
+		
+		<p>ORACLE DESIGNER es una aplicación software para analizar los requerimientos de negocios, y para diseñar y generar sistemas cliente/servidor que satisfagan tales requerimientos. 
+</p>
+	<ul><li><strong>Estrategia:</strong> La fase de estrategia está totalmente centrada en el negocio. El objetivo de esta fase es conseguir compresión de las metas de cada área, objetivos, procesos, dirección y necesidades del negocio para así poder estructurar y documentar la visión de un proyecto.</li>
+	<li><strong>Análisis:</strong> Corresponde con la definición del problema, objetivos, metas, y restricciones de cada elemento del sistema incluido el software.</li>
+	<li><strong>Diseño:</strong> Esta fase diseña una solución al problema planteado. Tiene en cuenta cuatro atributos: estructura de datos, arquitectura del software, representación de la interfaz y detalles procedimentales.</li>
+	<li><strong>Implementación:</strong> La solución anteriormente diseñada se implementa y se prueba.</li>
+</ul>
+
+	<p>Designer, para poder aplicar este modelo de proceso de desarrollo, incorpora soporte para el proceso de modelado de negocio (estrategia), para el análisis de sistemas (análisis), para el diseño de software (diseño) y para la generación de sistemas (implementación). De esta manera DESIGNER abarca el ciclo de vida del desarrollo de sistemas, generando formularios, informes y menús totalmente operativos y libres de error, además del código SQL necesario para crear los objetos de la base de datos.</p>
+	<p>Designer posee un repositorio multiusuario y está fuertemente relacionado con ORACLE DEVELOPER. De esta manera, DESIGENER permite a las organizaciones diseñar, y rápidamente desarrollar, sistemas cliente/servidor que se pueden adaptar a las necesidades cambiantes del negocio.</p>
+	<p>El repositorio consta de tablas y vistas que se utilizan como interfaz con los datos y el código procedimental que las maneja, almacenando en esencia, los detalles del sistema que se está desarrollando. El repositorio se encuentra en la base de datos ORACLE, en el área de dominio de su propietario. El propietario podrá conceder privilegios a los usuarios de ORACLE ya existentes, para que puedan ser usuarios de DESIGNER y así poder trabajar con el repositorio.</p>
+	<p>El repositorio mantiene metadatos, como definiciones de objetos o elementos que se están utilizando para crear el diseño del sistema. Existe una jerarquía de elementos, siendo el nivel más alto el sistema de aplicaciones, que contiene todos los elementos de un determinado proyecto, o parte de un proyecto, de desarrollo de sistemas.</p>
+	<p>Los propietarios de cada sistema de aplicaciones pueden conceder privilegios a otros usuarios para que puedan trabajar con dicho sistema de aplicaciones, y así poder involucrar a un gran número de individuos en el desarrollo de la aplicación.</p>
+	<p>El sistema de aplicaciones es propietario de dos tipos de elementos:</p>
+
+	<ul>
+		<li><strong>Elementos controlados de acceso primario (PAC):</strong> Se encuentran en el nivel más alto de la jerarquía de elementos. Un ejemplo de este tipo de elementos son las tablas de una base de datos.</li>
+		<li><strong>Elementos controlados de acceso secundario (SAC):</strong> Estos elementos son controlados y dependen de los PAC. Un ejemplo de este tipo de elementos son las definiciones de columnas de una tabla de la base de datos.</li>
+	</ul>
+	<p>El repositorio también almacena asociaciones, tratándose estas de un elemento (SAC) que relacionan un elemento con otro.</p>
+	<p>Cada definición de un elemento tiene un conjunto de propiedades que lo describen. Un tipo de elemento siempre tiene el mismo conjunto de propiedades, pero los valores de estas propiedades pueden ser distintos en cada instancia de una definición.</p>
+	
+	</div>
+	
+	<h2 class="titulo">Herramientas y Utilidades de Designer</h2>
+	<div class="contenido">
+		<p>Los programas de ORACLE DESIGNER se pueden clasificar en dos categorías: diagramadores y utilidades de repositorio.</p>
+
+<h3>Diagramadores:</h3>
+
+	<p>Los diagramadores son uno de los principales paradigmas de la interfaz, que DESIGNER utiliza para almacenar información, del análisis y diseño del sistema en el repositorio. Estos, trabajan directamente con los objetos del repositorio, por ejemplo, cuando se dibuja una entidad en un diagrama Entidad-Relación, DESIGNER inserta esta definición de entidad directamente en el repositorio. </p>
+
+<p>El repositorio almacena el diagrama Entidad-Relación, como un objeto con asociaciones con los objetos del mismo diagrama. Estas definiciones de objetos se pueden examinar usando el Navegador de objetos del repositorio, pero para hacer cambios en su composición es necesario acceder a los diagramadores.</p>
+
+
+<h3>Utilidades de Repositorio:</h3>
+
+	<p>Las utilidades de repositorio son todas las interfaces no orientadas a diagramas, que se utilizan para facilitar la introducción de datos en el repositorio. Por ejemplo, DESIGNER cuenta con una utilidad que permite convertir definiciones de entidades  en definiciones de tablas.</p>
+
+
+<h3>Componentes de DESIGNER</h3>
+
+	<p>Los componentes de DESIGNER están estructurados de tal manera que nos permiten ir, de un sistema global, a bases de datos reales y programas. Los componentes son los siguientes:</p>
+
+<ul><li>El modelador de procesos: Utilizado para crear una vista general comprensible del nuevo sistema.</li>
+
+<li>Herramientas que permiten al usuario llevar a cabo el análisis del sistema y el modelado de los componentes mas relevantes de este:</li>
+
+<ul><li>Entity Relationship Diagrammer, para el diseño de la base de</li>
+   datos.
+
+<li>Function Hierarchy Diagrammer, para el diseño de los módulos</li>
+   del programa.
+
+<li>Data Flow Diagrammer, para analizar y mostrar las relaciones existentes entre, funciones flujos de datos y almacenes de datos.</li></ul>
+
+<li>Herramientas que permiten al usuario el diseño del sistema:</li>
+
+<li>Database Design Transformer, genera el esquema y las tablas de la base de datos a partir del diagrama entidad relación.</li>
+
+<ul><li>Application Design Transformer, permite diseñar el sistema para las funciones.</li>
+
+<li>Herramientas de diseño de detalles específicos, como por ejemplo, los generadores de la base de datos, de formularios y de informes, que se encuentran en Design Editor.</li></ul>
+
+<p>Todas estas herramientas son accesibles desde la pantalla principal del programa.</p>
+
+<p><strong>Entity Relationship Diagrammer</strong></p>
+
+	<p>Este diagramador permite diseñar lógicamente la base de datos, utilizando el modelo Entidad-Relación, es decir, es el diagramador que nos permite, de manera gráfica, introducir el esquema conceptual de la base de datos en el repositorio. Para ello hay que definir las entidades con sus respectivos atributos, así como, definir las relaciones entre las entidades.</p>
+
+	<p>En este diagramador se pueden utilizar todos los elementos del modelo Entidad-Relación, pero con una notación en algunos de esos elementos distinta. Las principales diferencias se encuentran en la representación de las relaciones, de la relación ISA, y, que las relaciones no pueden tener atributos.</p>
+<p><strong>Database Design Transformer</strong></p>
+<p>Esta utilidad de ORACLE DESIGNER permite transforma el diseño lógico de la base de datos a diseño físico, es decir pasar el esquema conceptual a tablas, pero no las crea en la base de datos.</p>
+
+<p><strong>Design Editor</strong></p>
+
+	<p>El editor de diseño se divide en cuatro secciones: Server model, Module Applications, Database Administration y Distribution and Replication. Cada sección cuenta con una ventana que recoge la jerarquía de objetos y otra que muestra las propiedades de cada uno. Incorpora herramientas como diagramadores, editores de código y generadores.</p>
+
+	<p>En la sección Server Model se realiza el diseño y generación de la base de datos del sistema. La manipulación de datos podemos realizarla directamente sobre la jerarquía de objetos, o utilizando el diagramador del Server Model. El Server Model tiene tres componentes: Diagrama del modelo del servidor, editor de código y  generador de DDL.</p>
+
+	<p>En el diagrama del modelo del servidor se definen objetos del modelo relacional, como tablas; pudiendo además definir columnas o restricciones para claves primarias. Es muy parecido al diagramador Entidad-Relación. La diferencia estriba, en que el diagramador Entidad-Relación muestra el modelo conceptual, mientras que el diagrama del modelo del servidor muestra el diseño lógico, lo que al final se va a implementar. En este diagrama se pueden definir índices, clusters, vistas,… , lo cual no puede realizar el modelo entidad interrelación.</p>
+
+<p>El generador de código recorre el repositorio y genera las sentencias SQL, que crean los objetos diseñados en una base de datos relacional. Cuando se ejecuta, hay que especificar qué objetos se desea que sean generados. El código generado depende de los objetos existentes en la base de datos. Si ya están generados, y hay que realizar cambios, DESIGNER utilizará sentencias ALTER TABLE.</p>
+
+</div>
+
+<h2 class="titulo">Manual de instalación</h2>
+	<div class="contenido">
+
+<p>Antes de comenzar la instalación de ORACLE DESIGNER, tenemos que cumplir un requisito básico, tener instalada una versión completa de la base de datos ORACLE, cualquiera desde la versión ORACLE 8 y que no sea ninguna versión reducida, es decir EXPRES.</p>
+
+	<p>En cuanto a los requerimientos del sistema, siempre y cuando hayamos podido instalar la base de datos ORACLE, podremos instalar ORACLE DESIGNER.</p>
+
+	<p>ORACLE DESIGNER lo podemos descargar de la página de ORACLE, por separado, o como parte del paquete ORACLE DEVELOPER SUITE 10g. Este último incluye entre otros programas, ORACLE FORMS y ORACLE REPORTS. Aconsejo al usuario que descargue ORACLE DEVELOPER SUITE 10g.<a href="http://www.oracle.com/technology/software/products/ids/htdocs/101202winsoft.html">Descarga aquí</a>.</p>
+
+	<p>Una vez descargado ORACLE DEVELOPER SUIT 10g, procedemos a la instalación de este paquete de herramientas. Pasos para la instalación:</p>
+
+<ol><li>Iniciamos el instalador universal de ORACLE, que se encuentra en la carpeta \oracle_developer_suit\ds_windows_x86_101202_disk1.</li>
+
+<li>Pulsamos siguiente.</li>
+
+<li>Se indica la ruta de destino donde se va a instalar ORACLE DEVELOPER SUITE 10g. Pulsamos siguiente.</li>
+
+<li>Se selecciona la opción Terminar.</li>
+
+<li>Se pulsa siguiente.</li>
+
+<li>No se indica ningún servidor de correo y se pulsa siguiente.</li>
+
+<li>Se pulsa instalar.</li></ol>
+
+
+
+<p>Tras esperar unos minutos ya se tiene instalado ORACLE DEVELOPER SUITE 10g. A pesar de que tengamos todos los programas del paquete ORACLE DEVELOPER SUITE 10g instalados, y preparados para poder trabajar con ellos, ORACLE DESIGNER todavía no se puede utilizar porque falta por instalar el repositorio de ORACLE DESIGNER.</p>
+</div>
+
+<h2 class="titulo">Instalación del repositorio</h2>
+	<div class="contenido">
+	<p>Existen dos métodos para la instalación de ORACLE DESIGNER: una utilizando los scripts que proporciona ORACLE y otra realizando una instalación manual. La instalación que seguiremos, está basada en la utilización de los scripts de ORACLE. Pasos a seguir.</p>
+
+<ol><li> Comprobación de los parámetros de iniciación de la base de datos. Estos parámetros se encuentran en el fichero INIT.ORA que se encuentran en la dirección: database_Oracle_home\ADMIN\dbname\PFILE\INIT.ORA. En este fichero hay que modificar los parámetros que no coincidan con los siguientes valores, o añadir los que no se encuentren:<li>
+
+<pre>sort_area_size = 262144
+sort_area_retained_size = 65536
+hash_area_size = 1048576
+optimizer_index_caching = 50
+optimizar_index_cost_adj = 25
+sharedpoll_size =32000000
+db_block_buffers se quita el comentario # a partir de Oracle 9i.
+open_cursors = 3000
+processes = 100
+Mirar el tamaño de los bloques ORACLE. Se trata del parámetro db_block_size.
+Si db_block_size = 4096  db_file_multiblock_read_count = 16
+Si db_block_size = 2048  db_file_multiblock_read_count = 32
+Si db_block_size = 8192  db_file_multiblock_read_count = 8
+</pre>
+Reiniciar la base de datos ORACLE.
+
+<li>Iniciar la base de datos. Comprobamos que el TNS listener está iniciado. Para ello en Windows XP seguiremos los siguientes pasos:</li>
+
+<ol><li>Panel de control.</li>
+
+<li>Herramientas administrativas.</li>
+
+<li>Servicios.</li>
+
+<li>Buscar OracleOraDb10g_home1TNSListener. Este servicio tiene que estar iniciado.</li></ol>
+
+
+<li>En estos momentos estamos en condiciones de poder lanzar los scripts, que crean los objetos necesarios para la instalación del repositorio. Para ello primero hay que conectarse a la base de datos como sysdba. La ruta en la que se encuentran los scripts es la siguiente: DeveloperSuit_home1\repadm61\ADMIN. Los scripts que hay que lanzar son los siguientes: ckqa, ckparams.txt, ckvalga, ckcreate/ckcreate_mb, ckreport. El orden es el siguiente.</li>
+
+<ol><li> @ ruta/ckqa. Este script genera todos los objetos que necesita el repositorio, así como el propietario del este. El propietario por defecto que crea es REPOS_MANAGER y la contraseña MANAGER. Durante su ejecución el usuario tiene que indicar la ruta donde se ubicaran los tablespaces propios del repositorio.</li>
+
+<li>@ ruta/ckparams.txt.</li>
+
+<li>@ ruta/ckvalqa</li>
+
+<li>@ ruta/ckcreate. En el caso de queramos trabajar con caracteres de tamaño superior a un bytes se tiene que lanzar el script ckcreate_mb.</li>
+
+<li>@ ruta/ckreports.</li></ol>
+
+
+<li>Tras lanzar los scripts ya estamos en condiciones de poder instalar el repositorio. Para ello iniciamos el Repository Administration Utility. En esta utilidad pulsamos instalar repositorio y aceptamos los dos mensajes que se muestran. En la pantalla que aparece, se muestran los nombres de los tablespaces que se han creado, y los tenemos que asociar con cada uno de los nombres que hemos asignado a los tablespaces, durante la ejecución del script ckqa. Elegimos instalación small y pulsamos install. Tras 20 o 30 minutos el repositorio ya está instalado, y preparado ORACLE DESIGNER para poder comenzar a trabajar con él.</li>
+</ol>
+<p>Para poder comenzar a trabajar con ORACLE DESIGNER primero nos tenemos que crear un área de trabajo, así como un contendor en dicha área de trabajo. </p>
+
+</div>
+
+<h2 class="titulo">Crear Area de trabajo</h2>
+	<div class="contenido">
+
+<ol><li> Iniciar Repository Object Navigator, usando los mismos detalles de conexión que para iniciar la utilidad de administración del repositorio.</li>
+
+<li>En la pantalla de bienvenida del Repository Object Navigator, se selecciona Invoke Workarea Wizard. En el caso de que la opción no esté activa, volvemos a Repository Administration Utility. Abrimos el menú Options, seleccionamos la opción Enable Version Support y aceptamos el mensaje que se genera. Ya podemos volver al Repository Object Navigator y seleccionar Invoke Workarea Wizard.</li>
+
+<li>Seleccionar default workarea using the wizard. Se le asigna un nombre.</li></ol>
+
+</div>
+<h2 class="titulo">Crear un Contenedor</h2>
+	<div class="contenido">
+<ol><li>Se inicia el Repository Object Navigator.</li>
+
+<li>En esta utilidad se puede observar el workarea que hemos creado anteriormente. Se pincha sobre el botón secundario y se elige la opción Create Child. En la ventana que aparece se elige Aplication System.</li></ol>
+
+<p>Tras realizar estos pasos ya hemos creado un contenedor en donde poder desarrollar las aplicaciones que queramos.</p>
+
+</div>
+<h2 class="titulo">Error Habitual</h2>
+	<div class="contenido">
+
+
+	<p>Cuando se inicia por primera vez el diagramador Entity Relationship Diagramer, al crear una relación entre dos entidades, puede sugir el error ORA -01652, indicando que el tablespace temporal REPOS_TEMP no tiene espacio. Esto se arregla asignado un nuevo tempfile al tablespace temporal REPOS_TEMP. Esto se realiza lanzando la siguiente sentencia SQL.</p>
+
+<pre>ALTER TABLESPACE REPOS_TEMP ADD TEMPFILE ‘ruta_del_nuevo_tempfile’ SIZE 4M AUTOEXTEND ON;</pre>
+
+<p>Esta sentencia crea un nuevo tempfile en la ruta indicada y se lo asigna al tablespace REPOS_TEMP. Se puede indicar un tamaño máximo para el tempfile.</p>
+
+</div>
+	</div>
+	<div id="footer">
+		<small><a href="index.html">En el Nombre de Tux</a> &bull; <a href="indexe61b.html?section=QuienesSomos">Quienes somos</a> &bull; <a href="index733c.html?section=FAQ">FAQ</a></small><br />
+		<p>
+			<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/"><img alt="Creative Commons License" style="border:0;" src="templates/default/images/cc.png"/></a>
+			<a href="http://validator.w3.org/check?uri=referer"><img style="border:0;width:88px;height:31px" src="templates/default/images/vxhtml.png" alt="XHTML Válido" /></a>
+			<a href="http://jigsaw.w3.org/css-validator/check?uri=referer"><img style="border:0;width:88px;height:31px" src="templates/default/images/vcss.gif" alt="CSS Válido" /></a>
+		</p>
+	</div>
+</div>
+<!-- Google Analytics -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' 
+type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-1625957-5");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<!-- Fin Google Analytics -->
+</body>
+
+<!-- Mirrored from www.enelnombredetux.com/article.php?article=oracle&#38 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 05 Feb 2017 18:10:57 GMT -->
+</html>
+

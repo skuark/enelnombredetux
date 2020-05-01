@@ -1,0 +1,403 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from www.enelnombredetux.com/project.php?project=fractales&mode=accordion by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 05 Feb 2017 18:10:55 GMT -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="alternate" type="application/rss+xml" title="eendt blog RSS feed" href="http://feeds.feedburner.com/eendtblog" />
+	<title>Fractales &bull; Proyectos &bull; En el Nombre de Tux</title>
+	<link rel="stylesheet" href="templates/default/style.css" type="text/css" media="screen" />
+	<link rel="shortcut icon" href="templates/default/images/favicon.ico" />
+	<script type="text/javascript" src="includes/js/mootools.js"></script>
+	<script type="text/javascript" src="includes/js/validatecontactform.js"></script>
+	<script type="text/javascript">Window.onDomReady(function(){ var ac = new Fx.Accordion($$('.titulo'), $$('.contenido'),{alwaysHide: true}); });</script></head>
+<body>
+<div id="all">
+	<div id="header">
+		<div align="right"><a href="index.html"><img src="templates/default/images/cabecera.png" alt="Cabecera" /></a></div>
+	</div>
+	<div id="menu">
+		<ul>
+			<li><a class="off" href="index0128.html?section=Portada">Portada</a></li>
+			<li><a class="off" href="index26e2.html?section=Blog">Blog</a></li>
+			<li><a class="off" href="indexf7f9.html?section=Proyectos">Proyectos</a></li>
+			<li><a class="off" href="indexf6dd.html?section=Art%c3%adculos">Artículos</a></li>
+			<li><a class="off" href="indexc34d.html?section=Licencia">Licencia</a></li>
+			<li><a class="off" href="indexc77a.html?section=Contactar">Contactar</a></li>
+		</ul>
+	</div>
+	<div id="content">
+<div class="cab" style="width: 960px; height: 200px; margin: 30px 0 0 0; background: url('content/proyectos/fractales/images/projectlogo.jpg');"></div><p style="text-align:right; font-size:0.8em; color:#898989;"><strong>Autor/es:</strong> Jesús Manuel García Muñoz<br /><strong>Última revisión:</strong> Enero de 2006<br/><a class="changemodeurl" href="project6b41.html?project=fractales">Ver texto continuo</a></p><blockquote class="cita" style="margin: 20px 50px 20px 400px; font-family: serif; font-style: italic; font-size: 1.2em;">La Geometría Fractal cambiará a fondo su visión de las cosas. Seguir leyendo es peligroso. Se arriesga a perder definitivamente la imagen inofensiva que tiene de nubes, bosques, galaxias, hojas, plumas, flores, rocas, montañas, tapices y de muchas otras cosas. Jamás volverá a recuperar las interpretaciones de todos estos objetos que hasta ahora le eran familiares.</blockquote>
+<cite class="cita" style="margin: 0 50px 0 400px;">Michael F. Barnsley (Fractals Everywhere)</cite>
+
+<h2 class="titulo">¿Cómo surgen los fractales?</h2>
+<div class="contenido">
+	<p>Hacia el año 1958, Benoit Mandelbrot comienza una investigación en los laboratorios de IBM acerca del análisis del ruido y las perturbaciones eléctricas. Durante sus estudios encuentra un patrón de comportamiento y comienza a descifrar una estructura escondida que se repite a diversas escalas. Conforme avanzan sus investigaciones, llega a una sencilla pregunta que ejemplifica lo que acaba de descubrir. Esta pregunta es la siguiente: ¿Cuánto mide la costa de Inglaterra?</p>
+	<p>Esta pregunta puede parecer absurda puesto que con cualquier libro de geografía se puede contestar fácilmente. Ahora bien, imaginemos un valor <em>x</em> finito como resultado de la medición realizada, pero, ¿cómo se hizo la medición? Para contestar a esto se proponen tres situaciones:</p>
+	<ul>
+		<li>Observación de la costa desde un satélite. Los bordes parecen suaves y redondeados.</li>
+		<li>Observación de la costa desde un avión. Ahora observamos con más detalle los bordes de la costa, los cuales nos parecerán más rugosos.</li>
+		<li>Observación de la costa desde la superficie terrestre. En esta ocasión medimos centímetro a centímetro cada rugosidad del terreno.</li>
+	</ul>
+	<p>¿Cuál sería el resultado de la medición en cada caso? ¿Serían iguales o diferentes? Evidentemente estos resultados serían diferentes puesto que como podemos comprobar, una figura con bordes rectos tiene una longitud menor que la misma figura con los bordes rugosos. Por lo tanto, nuestras mediciones dependerían en gran medida de la escala a la que las realicemos.</p>
+</div>
+
+<h2 class="titulo">Concepto de fractal</h2>
+<div class="contenido">
+	<p>No es tan fácil definir objetivamente el concepto de fractal, puesto que se trata de una realidad abstracta. Sin embargo, podemos acercarnos a dicho concepto con la siguiente definición.</p>
+	<p>Un fractal es un objeto geométrico cuya estructura se repite en diferentes escalas. Esta estructura puede ser generada por un proceso recursivo o iterativo capaz de producir estructuras similares independientemente de la escala de de la teoría del caos, la cual se basa en una interconexión que se manifiesta en acontecimientos aparentemente aleatorios (veremos dicha teoría con detalle más adelante).</p>
+	<p>Además de esta definición podemos caracterizar a los fractales del siguiente modo:</p>
+	
+	<ul>
+		<li>Los fractales son objetos matemáticos que conforman la geometría de la teoría del caos, la cual se basa en una interconexión que se manifiesta en acontecimientos aparentemente aleatorios (veremos dicha teoría con detalle más adelante).</li>
+		<li>La geometría fractal es también conocida como la geometría de la naturaleza. Podemos observar las siguientes imágenes para comprobarlo:
+		<img alt="01.jpg" src="content/proyectos/fractales/images/01.jpg"/></li>
+		<li>Los fractales son objetos cuya dimensión es fraccionaria.</li>
+		<li>Un objeto fractal es aquel cuya dimensión de Hausdorff supera a su dimensión topológica.</li>
+		<li>La dimensión fractal es otra de las características de los fractales, la cual deben poseer todos ellos. Esta requiere un estudio más detallado que llevaremos acabo más adelante.</li>
+		<li>Cada porción del objeto posee las mismas características que el objeto completo, es decir, posee una autosimilitud. Podemos ver un ejemplo a través del famoso "conjunto de Mandelbrot".
+		<img alt="02.jpg" src="content/proyectos/fractales/images/02.jpg"/>
+		En la primera imagen podemos ver el conjunto de mandelbrot al completo. En las siguientes imágenes se ha hecho zoom (no es esta la palabra adecuada, pero si nos sirve para aclararnos las ideas) sucesivamente. Así pues, podemos observar una cierta regularidad que se repite en todas y cada una de las imágenes, la cual se repetirá hasta el infinito (solo en el ámbito teórico).</li>
+	</ul>
+</div>
+
+<h2 class="titulo">Tipos de fractales</h2>
+<div class="contenido">
+	<p>Para distinguir los distintos tipos de fractales nos basamos en varias de las características que poseen. De este modo podemos clasificarlos según las siguientes características:</p>
+	<ul>
+		<li>Los fractales lineales son aquellos que se construyen con un cambio en la variación de sus escalas. Esto implica que los fractales lineales son idénticos en sus escalas hasta el infinito. Podemos hacernos una idea viendo las siguientes imágenes:
+		<img alt="03.jpg" src="content/proyectos/fractales/images/03.jpg"/>
+		Como podemos observar, si ampliásemos cualquiera de estas imágenes siempre encontraríamos la misma estructura.<br />
+		Sin embargo, no es este el caso de los fractales no lineales. Estos se generan creando distorsiones no lineales o complejas. A continuación unos ejemplos:
+		<img alt="04.jpg" src="content/proyectos/fractales/images/04.jpg"/></li>
+		<li>Los fractales pueden ser generados a partir de elementos de la matemática tradicional (fractales lineales) o a partir de números complejos. De hecho, el fractal de Mandelbrot está generado a partir de la iteración de la siguiente expresión compleja:
+		<img alt="05.jpg" src="content/proyectos/fractales/images/05.jpg"/>
+		Dónde <em>Z</em> y <em>W</em> son dos números complejos.</li>
+		<li>Las iteraciones consisten en repetir y volver sobre si mismo una cierta cantidad de veces. En el caso de los fractales iteramos fórmulas matemáticas como acabamos de ver en el anterior apartado. Esta iteración la realizamos mediante el uso de algoritmos. Es por ello que la aparición del campo de investigación de los fractales es relativamente reciente, pues realizar cálculos complejos para construirlos hubiese sido una ardua tarea para llevarla a cabo sin la ayuda de un ordenador.<br />
+Teniendo en cuenta la definición de fractal, como objeto repetido a diferentes escalas hasta el infinito, podemos observar que esto es imposible de llevar a cabo en la práctica puesto que ninguna máquina es capaz de realizar cálculos hasta el infinito. Por lo tanto, la idea de fractal perfecto solo la podremos estudiar teóricamente.</li>
+		<li>Como vimos anteriormente, todos los fractales deben poseer una dimensión fractal pero no todos tienen por qué ser autosimilares. A estos fractales que no poseen una autosimilitud los denominamos fractales plasmáticos. El siguiente es un ejemplo de un fractal plasmático:
+		<img alt="06.jpg" src="content/proyectos/fractales/images/06.jpg"/></li>
+	</ul>
+</div>
+
+<h2 class="titulo">La dimensión fractal</h2>
+<div class="contenido">
+	<p>Los fractales deben poseer una dimensión que debe ser no entera y cuya dimensión de Hausdorff o fractal, la cual veremos a continuación, debe superar a su dimensión topológica. Las dimensiones topológicas son las siguientes:</p>
+	<ul>
+		<li>Dimensión -1 (conjunto vacío)</li>
+		<li>Dimensión 0 (un punto)</li>
+		<li>Dimensión 1 (una línea recta)</li>
+		<li>Dimensión 2 (un plano)</li>
+		<li>Dimensión 3 (el espacio)</li>
+	</ul>
+	<p>Como los fractales están compuestos por elementos cada vez más pequeños de sí, el concepto de longitud pasa a ser algo complejo por lo que mediremos los fractales por su dimensión.</p>
+	<p>A continuación pasaremos a explicar, matemáticamente, cómo podemos calcular la dimensión de un fractal, lo que también nos servirá para conocer cuando un objeto es o no un fractal.</p>
+	<p>La expresión matemática para calcular la dimensión de un fractal es S = L^D de la cual S es la cantidad de segmentos o su longitud, L es la escala de dimensión y D es la dimensión, la cual tenemos que despejar. Despejando obtenemos lo siguiente:
+	<img alt="07.jpg" src="content/proyectos/fractales/images/07.jpg"/></p>
+	<p>Vamos ahora a comprobar si una línea recta es un fractal. Tomamos por ejemplo un segmento de 1 metro de longitud, el cual mediremos con una regla que también mide un metro. Por lo tanto tendremos S=1 y L=1. Para calcular la dimensión de esa recta operamos en la expresión que vimos anteriormente.
+	<img alt="08.jpg" src="content/proyectos/fractales/images/08.jpg"/></p>
+	<p>Obtenemos por lo tanto que la dimensión de una recta es 1. Por la definición de fractal, decíamos que un fractal debe poseer una dimensión de Hausforff (la cual acabamos de calcular) superior a su dimensión topológica (que vale 1). Por lo tanto deducimos que una recta no es un fractal puesto que ambas dimensiones valen 1.</p>
+	<p>Análogamente probamos que un cuadrado (de dimensión 2) y un cubo (de dimensión 3) tampoco son fractales porque sus dimensiones de Hausdorff no superan a sus dimensiones topológicas.</p>
+	<p>Veamos ahora un ejemplo del calculo de la dimensión de un objeto que sí que es un fractal. Antes tenemos que dar una breve explicación de cómo se genera un fractal.</p>
+	<p>Un fractal se genera en tres etapas. La primera es definir una figura generadora. La segunda etapa es aplicar un determinado algoritmo sobre esa figura y la tercera etapa consiste en iterar ese algoritmo sobre la figura generada. Veamos un ejemplo gráfico con la conocida <em>curva de Koch</em>.</p>
+	<ul>
+		<li>1º Etapa (definición de la figura generadora)
+		<img alt="10.jpg" src="content/proyectos/fractales/images/10.jpg"/></li>
+		<li>2º Etapa (aplicación de un determinado algoritmo)
+		<img alt="11.jpg" src="content/proyectos/fractales/images/11.jpg"/></li>
+		<li>3º Etapa (iteración de dicho algoritmo)
+		<img alt="12.jpg" src="content/proyectos/fractales/images/12.jpg"/></li>
+	</ul>
+	<p>Veamos que en principio toma una línea recta, la cual divide en tres segmentos y el del medio lo transforma en dos aristas de un triangulo rectángulo. En el siguiente paso aplica exactamente el mismo algoritmo con cada fragmento que se había obtenido en el paso anterior. Así sucedería hasta el infinito.</p>
+	<p>Pasemos ahora a calcular la dimensión de este objeto. En este caso L=3 ya que la imagen generadora se divide en tres segmentos iguales. Luego nuestro algoritmo transforma uno de esos segmanetos en dos, por lo que obtenemos un número de segmentos S=4. Aplicando la formula de la dimensión obtenemos:
+	<img alt="13.jpg" src="content/proyectos/fractales/images/13.jpg"/></p>
+	<p>Hemos obtenido pues, una dimensión no entera y mayor que la dimensión topológica de la imagen generadora que vale 1 por lo que efectivamente, la curva de Koch es un fractal. De manera similar podríamos calcular la dimensión de bastantes fractales de tipo lineal. Sin embargo, calcular la dimensión de un fractal complejo no nos sería posible tan fácilmente.</p>
+</div>
+
+<h2 class="titulo">Fractales y la Teoría del Caos</h2>
+<div class="contenido">
+	<p>La teoría del caos tiene un fuerte trasfondo filosófico. El enfrentamiento entre el orden y el caos, o entre reaccionismo y determinismo postulan nuevas preguntas que dan lugar a la llamada <em>"Nueva Ciencia"</em>.</p>
+	<p>Los fractales no lineales o complejos implican caos, pero el caos no implica a fractales, es decir, la teoría del caos no se basa únicamente en la geometría fractal.</p>
+	<p>Los sistemas caóticos son aquellos que se encuentran afectados directamente por sus condiciones iniciales, transformándolos en el transcurso del tiempo en sistemas imposibles de predecir.</p>
+	<p>Podemos poner como ejemplo el llamado <em>"efecto mariposa"</em>, el cual estipula que pequeñas variaciones en las condiciones iniciales de un sistema dinámico pueden producir grandes variaciones en el comportamiento del sistema a largo plazo. Se dice para ejemplificar esta definición que si una mariposa aletea en Tokio, bajo determinadas circunstancias es posible que la onda que produce el aleteo viaje y se potencie originando un huracán en el Caribe. Por lo tanto nos encontramos ante un fenómeno prácticamente imposible de predecir. Vemos pues que cualquier sistema regido por las leyes de la naturaleza en un momento dado se puede transformar en un sistema totalmente caótico que esté regido más por el azar que por las leyes de la naturaleza.</p>
+	<p>Nos resulta importante conocer los puntos de inflexión dónde se produce el cambio entre el orden y el caos. Esto nos lleva a enunciar tres postulados importantes sobre la teoría del caos:</p>
+	<ul>
+		<li>Para la teoría del caos no existen sistemas ni 100% ordenados ni 100% caóticos. Esta teoría acepta tanto al orden como al caos y lo relaciona en una dualidad de la siguiente manera:
+		<blockquote><em>"En todo sistema ordenado, el caos siempre está presente o implícito"</em></blockquote>
+		<blockquote><em>"En todo sistema caótico, el orden siempre está presente o implícito"</em></blockquote>
+		</li>
+		<li>Imaginemos un sistema ordenado. En todo momento este sistema permanece ordenado pero lleva implícito consigo el mismo caos, que va trabajando poco a poco muy silenciosamente y en un determinado punto se apoderará por completo del mismo produciendo consecuencias insospechadas.</li>
+		<li>Por más que un sistema haya derivado en caos o se haya vuelto ordenado y estable, potencialmente vuelve a pasar al estado inverso. Ahora, aquel que era estable y derivó en caos vuelve a llevar implícito consigo mismo el volver a transformarse nuevamente en orden. Y aquel que era caótico y desordenado y derivó en orden, ahora lleva el caos implícito en su esencia. Esto lleva a conformar un circuito que no es ni más ni menos que cómo se genera y se construye la naturaleza.</li>
+	</ul>
+	<p>Veamos algunos ejemplos que se dan en la naturaleza y que se basan en la teoría del caos.</p>
+	<p><strong>Ejemplo 1</strong></p>
+	<p>Supongamos que clavamos diferentes clavos en una pared como apreciamos en el siguiente dibujo:</p>
+	<img alt="14.jpg" src="content/proyectos/fractales/images/14.jpg"/>
+	<p>Ahora posicionaremos en el primer clavo una bolita y la dejaremos caer, de modo que esta bolita irá bajando hasta la base del triángulo formado y saldrá entre dos clavos. Ahora repitamos el mismo experimento. Podemos probar que el recorrido que realiza la bola y la posición por la que sale, muy probablemente sea distinta a los del anterior experimento.</p>
+	<p>Por lo tanto observamos que cada vez que el experimento se realiza obtenemos distintos resultados puesto que la bola llega un momento que pasa entre dos clavos distintos lo que deriva en que probablemente la salida sea distinta. Entonces, podemos afirmar que el sistema se comporta de un modo caótico.</p>
+	<p><strong>Ejemplo 2</strong></p>
+	<p>Científicos realizaron la siguiente investigación.</p>
+	<p>Se convocó a una persona que no había jugado ni sabía en qué consistía el famoso juego "Tetris". Se le inyectó glucosa radioactiva (de la cual se alimenta el cerebro) y comenzó a jugar sin dársele explicación de cómo jugar a dicho juego. Con un monitor conectado al cerebro pudieron observar que la glucosa radioactiva iluminaba las regiones del cerebro que la persona utilizaba para entender cómo se jugaba, las cuales en primera instancia se manifestaban en gran cantidad. Más tarde se volvió a repetir el procedimiento, enseñándole a jugar al mismo tiempo. Mientras la persona más aprendía menos regiones del cerebro se le iluminaban, pues este iba asimilando y almacenando la información y ya no tenía que buscar datos por la corteza del cerebro. Cuando había aprendido a jugar por completo solo una pequeña región del cerebro se iluminaba.</p>
+	<p>Este es un caso que se basa en la teoría del caos, pues podemos observar cómo un sistema caótico se transforma en uno ordenado.</p>
+	<p><strong>Ejemplo 3</strong></p>
+	<p>Al arrojar una piedra en un estanque de agua se genera una perturbación produciéndose pequeñas ondas, las cuales, dependiendo de la fuerza con la que se lanzó la piedra o de las condiciones del agua en ese momento, pueden durar más o menos tiempo, llegando a desaparecer. Sin embargo, John Russell observó un extraño fenómeno. En estas situaciones en que se dan una serie de condiciones iniciales muy especiales, hay olas en el océano que se unen formando una nueva con características propias. A esta ola se la denomina "solitón" y viene a ser, por definición, una onda solitaria que se propaga sin deformarse en un medio no lineal. Esta onda no se deforma aunque sea atravesada por un barco, al instante recobra la estructura original. Aunque se produzcan vientos o tormenta esta sigue adelante. Se ha investigado mucho sobre este fenómeno, el cual se dice que puede englobar todos los misterios de la teoría del caos.</p>
+	<p>Hemos visto pues, otro ejemplo más de cómo un sistema caótico se transforma en un sistema totalmente ordenado y armónico.</p>
+</div>
+
+<h2 class="titulo">Fractales y Matemática</h2>
+<div class="contenido">
+	<p>A continuación vamos a ver algunos casos en los que las matemáticas están íntimamente ligadas a los fractales.</p>
+	<h3>Triángulo de Pascal y Triángulo de Sierpinski</h3>
+	<p>Si sombreamos los números impares del triangulo de Pascal obtenemos el triángulo de Sierpinski.
+	<img alt="15.jpg" src="content/proyectos/fractales/images/15.jpg"/></p>
+	<p>Se trata de un caso en el que una estructura fractal se encuentra oculta dentro de una figura de la matemática clásica conocida desde hace más de 700 años.</p>
+	<h3>El número PI dentro del conjunto de Mandelbrot</h3>
+	<p>Matemáticos, investigando en teoría de números decidieron estudiar el conjunto de Mandelbrot. Dividieron el estudio en dos partes, primero el cuello de esta imagen y luego su parte posterior. Estudiando iteraciones en el cuello y en la parte posterior del conjunto se llegó a estos resultados:
+	<img alt="16.jpg" src="content/proyectos/fractales/images/16.jpg"/><img alt="17.jpg" src="content/proyectos/fractales/images/17.jpg"/></p>
+	<p>A simple vista nos damos cuenta de que en estas tablas se esconde el número PI.</p>
+	<p>Estas son pues algunas de las muchas curiosidades que esconda la matemática con respecto a los fractales. Funciones de Riemann también esconden estructuras fractales.</p>
+</div>
+
+<h2 class="titulo">Algunas imágenes fractales</h2>
+<div class="contenido">
+	<img alt="18.jpg" src="content/proyectos/fractales/images/18.jpg"/><br />
+	<img alt="19.jpg" src="content/proyectos/fractales/images/19.jpg"/><br />
+	<img alt="20.jpg" src="content/proyectos/fractales/images/20.jpg"/><br />
+	<img alt="21.jpg" src="content/proyectos/fractales/images/21.jpg"/><br />
+	<img alt="22.jpg" src="content/proyectos/fractales/images/22.jpg"/><br />
+	<img alt="23.jpg" src="content/proyectos/fractales/images/23.jpg"/><br />
+	<img alt="24.jpg" src="content/proyectos/fractales/images/24.jpg"/><br />
+	<img alt="25.jpg" src="content/proyectos/fractales/images/25.jpg"/><br />
+	<img alt="26.jpg" src="content/proyectos/fractales/images/26.jpg"/>
+</div>
+
+<h2 class="titulo">Software fractal</h2>
+<div class="contenido">
+	<p>Existen bastantes programas capaces de trabajar con fractales. Con la ayuda de estos podemos, desde crear nuestros propios fractales, hasta crear una bella melodía musical (de lo cual hablaremos en el capítulo siguiente).</p>
+	<p>Generalmente, este tipo de software se divide en dos tipos, que a su vez se divide en diversas categorías, dependiendo de la especialización del mismo para diversos temas:</p>
+	<ul>
+		<li>Estudio de fractales desde un punto de vista teórico.
+		<ul>
+			<li>Nivel matemático.</li>
+			<li>Nivel de programación.</li>
+			<li>Nivel de desarrollo de algoritmos.</li>
+			<li>Creación de fractales IFS (fractales simples).</li>
+			<li>Evolución de atractores (sistemas que tras un número de iteraciones tienden a estabilizarse).</li>
+		</ul></li>
+		<li>Estudio de fractales desde un punto de vista artístico.
+		<ul>
+			<li>Creación de imágenes.</li>
+			<li>Galerías virtuales.</li>
+			<li>Música fractal (los estudiaremos en el próximo capítulo).</li>
+			<li>Películas fractales.</li>
+		</ul></li>
+	</ul>
+	<p>Pasaremos a comentar los programas más conocidos para trabajar con fractales.</p>
+	<h3>Fractint</h3>
+	<p>Este es un software, con licencia freeware (aunque está disponible el código fuente, además de los binarios), pionero en la materia. Es muy potente respecto a la relación entre fractales y matemáticas, a pesar de no estar muy desarrollado en el aspecto gráfico.</p>
+	<p>Este software se puede encontrar para los sistemas Windows, DOS y Unix. La versión más desarrollada es la versión para sistemas DOS (actualmente se encuentra en su versión 20.0), la cual, a pesar de que este software está especializado en el estudio matemático de los fractales, también incluye funcionalidades para generar imágenes. Las versiones para Windows y Linux no están tan desarrolladas, aunque la de este último es también bastante potente. Puesto que la versión para plataformas DOS es la más desarrollada, explicaré las características de esta.</p>
+	<p>Tras haber descargado y ejecutado el programa, además de seleccionar el modo de video que soporta nuestra tarjeta, podemos ver cómo el programa nos muestra el conjunto de Mandelbrot en pantalla. Este es un fractal tipo, pero sin duda podemos proporcionar al programa los datos de otro fractal, e incluso, el mismo programa incluye otras 100 fórmulas para interactuar.
+	<img alt="27.jpg" src="content/proyectos/fractales/images/27.jpg"/></p>
+	<p>Mediante las teclas de avance y retroceso de página podemos seleccionar un recuadro del fractal, y posteriormente pulsar intro para agrandarlo (iterando) en la zona que deseemos.
+	<img alt="28.jpg" src="content/proyectos/fractales/images/28.jpg"/><br />
+	<img alt="29.jpg" src="content/proyectos/fractales/images/29.jpg"/></p>
+	<p>Puesto que el método para agrandar la imagen es la iteración, y no podemos hacer un programa que itere infinitas veces, habrá un momento en el que la imagen que veamos sea de un solo color. Lo siguiente es una cita, textual, de un fragmento de un tutorial bastante amplio de fractint que podemos encontrar públicamente en la red (en la sección de enlaces se incluye el enlace a este tutorial).</p>
+	<blockquote><em>"La mayoría de los tipos de fractal incluidos admiten ampliar cualquier parte de la imagen. En principio, el límite de zoom por procedimientos normales es de 10¹⁵. Eso significa, más o menos, ampliar una mesa de ping-pong más allá del tamaño del sistema solar. Podría ser suficiente, pero lo cierto es que, aplicando una técnica llamada precisión arbitraria, fractint puede llegar a niveles de ampliación del orden de 10¹⁶⁰⁰. No existen ejemplos de esta relación de tamaño dentro del universo conocido."</em></blockquote>
+	<p>Como mencionábamos antes, fractint incluye otras 100 fórmulas para interactuar con ellas. Podemos acceder a estas presionando la tecla t o desde el menú principal, seleccionando la opción <em>"Select Fractal Tipe"</em>.</p>
+	<p>Algo interesante de este programa es que se puede interactuar con fractales del tipo IFS como por ejemplo el triángulo de Sierpinski.</p>
+	<p>Otra funcionalidad interesante de fractint es que podemos guardar nuestra propia imagen del tipo gif del trabajo que hemos realizado, y además, no se guarda como un gif normal y corriente, sino que almacena los datos del fractal, de modo que podemos abrirla con fractint y seguir trabajando sobre ella. Para guardar una imagen presionaremos la tecla s o desde el menú principal, seleccionando la opción <em>"Save image to file"</em>. Esta se guardará en el directorio del programa.</p>
+	<p>Pues bien, estas son, a grandes rasgos, las opciones principales de fractint, aunque este programa incluye muchas más, como la apertura de los ficheros antes mencionados, el cambio de la paleta de colores, posibilidad de dar parámetros para visualizar un fractal en 3D y un sinfín de opciones más. Como ya comentaba antes, en la sección de enlaces he incluido bastantes enlaces interesantes para seguir trabajando con este programa.</p>
+	<p>A continuación podemos ver algunos ejemplos de fractales generados con fórmulas incluidas en fractint.
+	<img alt="30.jpg" src="content/proyectos/fractales/images/30.jpg"/> <img alt="31.jpg" src="content/proyectos/fractales/images/31.jpg"/> <img alt="32.jpg" src="content/proyectos/fractales/images/32.jpg"/> <img alt="33.jpg" src="content/proyectos/fractales/images/33.jpg"/> <img alt="34.jpg" src="content/proyectos/fractales/images/34.jpg"/> <img alt="35.jpg" src="content/proyectos/fractales/images/35.jpg"/> <img alt="37.jpg" src="content/proyectos/fractales/images/37.jpg"/> <img alt="38.jpg" src="content/proyectos/fractales/images/38.jpg"/> <img alt="39.jpg" src="content/proyectos/fractales/images/39.jpg"/> <img alt="40.jpg" src="content/proyectos/fractales/images/40.jpg"/>
+	</p>
+	<h3>Ultra Fractal</h3>
+	<p>Este programa es otro de los más importantes que podemos encontrar para el propósito de trabajar con fractales. A diferencia de fractint, este es un caso de software propietario aunque desde la Web podemos descargar una versión que caduca en 30 días y con algunas limitaciones, como la imposición de marcas de agua en las imágenes o videos que permite generar.</p>
+	<p>Se distribuye exclusivamente para plataformas Windows y existen dos versiones. La primera es la “Edición Animada” y la segunda la “Edición Estándar”. La diferencia entre ambas es que la estándar no permite creación de animaciones ni cálculos de red (esta característica permite acelerar los cálculos utilizando la capacidad de procesamiento de otras máquinas conectadas a la red).</p>
+	<p>Es un programa de uso bastante sencillo para comenzar a investigar en el campo de los fractales. Es capaz de generar imágenes bastante buenas e incluso increíbles animaciones.</p>
+	<p>Al igual que fractint, al ejecutarlo nos muestra el conjunto de Mandelbrot. Podemos hacer zoom seleccionando una zona de la imagen con el ratón e iterar sobre esa zona haciendo doble clic, tanto ampliando como disminuyendo.
+	<img alt="41.jpg" src="content/proyectos/fractales/images/41.jpg"/></p>
+	<p>Podemos encontrar otros tipos de fractales guardados en el directorio <em>"Parameters"</em> del directorio de trabajo del programa que generalmente se crea en el interior de <em>"Mis documentos"</em>.
+	<img alt="42.jpg" src="content/proyectos/fractales/images/42.jpg"/></p>
+	<p>Ultra Fractal también es una útil herramienta para diseñadores gráficos, puesto que permite almacenar imágenes de fractales que previamente hayamos creado, dándole diversos efectos como transparencias, color, saturación...
+	<img alt="43.jpg" src="content/proyectos/fractales/images/43.jpg"/></p>
+	<p>En definitiva, tenemos diversidad de opciones fácilmente localizables. A continuación enumeraré varias de estas:</p>
+	<ul>
+		<li>Apertura de un trabajo previamente salvado.</li>
+		<li>Posibilidad de hacer un <em>backup</em> de los cálculos para reanudarlos en otro momento.</li>
+		<li>Conexión a otras máquinas para utilizar la capacidad de procesamientos de estas (esta función la encontramos solamente en la <em>"Edición Animada"</em>).</li>
+		<li>Creación de imágenes o video de la iteración y transformación iterativa de un fractal (también como característica de la <em>"Edición Animada"</em>).
+</li>
+		<li>Cambio del gradiente de un fractal, de modo que podremos visualizar el fractal con una diversa gama de colores de una determinada paleta (la cual se puede cambiar). A continuación un ejemplo de esta característica:
+		<img alt="44.jpg" src="content/proyectos/fractales/images/44.jpg"/> <img alt="45.jpg" src="content/proyectos/fractales/images/45.jpg"/></li>
+	</ul>
+	<p>Hay muchísima información en la red relacionada con el uso de este programa. Igualmente que en el anterior apartado, he incluido diversos enlaces con información interesante para aprender a utilizar todas las posibilidades que nos brinda este software.</p>
+	<p>A continuación, algunas imágenes generadas con Ultra Fractal:
+	<img alt="46.jpg" src="content/proyectos/fractales/images/46.jpg"/> <img alt="47.jpg" src="content/proyectos/fractales/images/47.jpg"/> <img alt="48.jpg" src="content/proyectos/fractales/images/48.jpg"/> <img alt="49.jpg" src="content/proyectos/fractales/images/49.jpg"/> <img alt="50.jpg" src="content/proyectos/fractales/images/50.jpg"/> <img alt="51.jpg" src="content/proyectos/fractales/images/51.jpg"/> <img alt="52.jpg" src="content/proyectos/fractales/images/52.jpg"/> <img alt="53.jpg" src="content/proyectos/fractales/images/53.jpg"/>
+	</p>
+	<h3>Otros programas</h3>
+	<p>Además de estos dos programas, podemos encontrar bastantes más, aunque los anteriores sean los más importantes. La siguiente lista refleja alguno más:</p>
+	<ul>
+		<li>Fractal Explorer: No es tan artístico como Ultra Fractal, aunque posee una opción para generar paisajes fractales en 3 dimensiones.</li>
+		<li>Tierazon: También posee la capacidad de crear videos.</li>
+		<li>ChaosPro: Otro programa con el que se pueden crear imágenes bastante interesantes. Similar a Ultra Fractal.</li>
+	</ul>
+</div>
+
+<h2 class="titulo">Música fractal</h2>
+<div class="contenido">
+	<p>La geometría fractal no solo puede estimular los sentidos a través de la generación de impresionantes imágenes virtuales, sino también por medio de melodías desafinantes.</p>
+	<p>Normalmente se entiende por música fractal aquella que ha sido generada a partir de la proyección de un espacio musical del comportamiento de un determinado fractal. Aunque el fractal sea autosemejante e invariable a la escala, es difícil que la composición musical lo sea; es complicado incluso definir exactamente estos conceptos para una melodía.</p>
+	<p>Algunos estudios han encontrado rasgos de autosemejanza en algunas piezas clásicas. Por ejemplo, la coral situada al final de <em>"Kunst der Fuge" (1749)</em> de Johann Sebastián Bach es un ejemplo de pieza autosemejante. En ella los mismos motivos son repetidos una y otra vez con distintas variaciones dentro de una región mayor de la pieza. Así, por ejemplo, varias voces repiten al doble de velocidad la melodía de la voz principal.</p>
+	<p>Hay varios trabajos que analizan la manifestación de estructuras fractaliformes en composiciones clásicas: estudia la analogía entre la estructura del conjunto de Cantor y la primera <em>"Ecossaisen"</em> de Beethoven, así como entre el triángulo de Sierpinski y el tercer movimiento de la sonata para piano <em>"15, opus 28"</em>, del mismo compositor. También se está analizando la autosemejanza de las <em>"fugas"</em> de Bach.</p>
+	<p>Cada vez son más los compositores que utilizan el caos o la geometría fractal como apoyo en sus composiciones. Dos de ellos son los siguientes:</p>
+	<ul>
+		<li>Phil Thompson: Programador y músico. Comenzó a componer música fractal como un hobby hasta que una de sus composiciones fue emitida en una cadena de radio y atrajo la atención de un gran número de personas. En 1988 se publicó su primer álbum, titulado <em>"Organizad chaos"</em>. Las composiciones de este autor tienen como base el conjunto de Mandelbrot. Thompson es también el creador de un programa llamado <em>"Gingerbread"</em> utilizado para crear música fractal.</li>
+		<li>Gary Lee Nelson: En su obra <em>"The voyage of the Golah Iota"</em> explota las propiedades de la ecuación logística como origen de la síntesis granular (agrupar un gran número de pequeños sonidos para formar estructuras complejas). La síntesis se construye incrementando gradualmente el parámetro de crecimiento <em>r</em> de la ecuación logística, comenzando en la zona no caótica de la ecuación, adentrándose en la zona caótica y volviendo atrás.</li>
+	</ul>
+	<p>Una forma sencilla de crear una melodía es a partir de una secuencia de números enteros positivos e ir asignando a cada uno una determinada nota musical. Para obtener un buen resultado es necesario que los valores de la secuencia estén acotados de manera que las notas generadas no pertenezcan a octavas muy alejadas.</p>
+	<p>Para crear música de este tipo existen programas como por ejemplo Muxinum.
+	<img alt="54.jpg" src="content/proyectos/fractales/images/54.jpg"/></p>
+	<p>Para generar música fractal de otros modos podemos encontrar el siguiente software:</p>
+	<ul>
+		<li>The Well Tempered Fractal (TWTF): El objetivo de este programa, según su autor, es producir información musical que los compositores puedan manipular para crear sus piezas, no producir directamente música. Consiste en seleccionar un sistema caótico, a través del cual, el programa genera aleatoriamente valores para los parámetros del sistema y comienza a dibujar los puntos resultantes. Conforme estos puntos se van dibujando se reproducen las notas correspondientes.
+		<img alt="55.jpg" src="content/proyectos/fractales/images/55.jpg"/></li>
+		<li>Lmuse: Este programa interpreta sistemas L. Un sistema L reescribe recursívamente una cadena de símbolos según un conjunto de reglas de transformación. La sentencia resultante se interpreta en Lmuse como una serie de órdenes para una <em>"tortuga"</em> que dibuja conforme se mueve, pero que también escribe música.
+		<img alt="56.jpg" src="content/proyectos/fractales/images/56.jpg"/></li>
+	</ul>
+</div>
+
+<h2 class="titulo">Otras aplicaciones de los fractales</h2>
+<div class="contenido">
+	<p>Además de las aplicaciones que hemos visto hasta ahora (música fractal, creación de imágenes de gran belleza…), los fractales han aportado algunos avances en otros campos de como lo son la computación, la medicina o la geografía entre otras. Veamos las aportaciones a estas tres ramas.</p>
+	<h3>Computación</h3>
+	<p>Dentro de las aplicaciones que se le dan a los fractales, las que se presentan en el campo de la computación son verdaderamente interesantes. Además, se considera la aplicación pionera de los fractales.</p>
+	<p>La aplicación más común en este campo es la de la transformación fractal, proceso que se utiliza en el tratamiento de imágenes para reducir su tamaño en memoria física (comprimirlas). La primera vez que se pudo observar esta utilización de los fractales fue en la <em>"Enciclopedia Multimedia Encarta"</em>, a pesar de que hoy por hoy se lleva a cabo tanto en compresión de video, como en videojuegos. Para comprender cómo se lleva a cabo este proceso veámoslo con un ejemplo.</p>
+	<p>Las imágenes que se muestran en la pantalla de un ordenador se dividen en pequeños puntitos llamados píxeles que unidos, y cada uno de un determinado color, forman una imagen. Dependiendo del monitor, podemos visualizar más o menos píxeles en pantalla, por lo cual, a mayor número de píxeles mayor detalle de la imagen, y por lo tanto mejor calidad. Si una imagen contiene un mayor número de píxeles, es de suponer que almacenará más cantidad de información y por lo tanto el tamaño físico de la imagen debe ser mayor. A continuación un ejemplo gráfico:
+	<img alt="57.jpg" src="content/proyectos/fractales/images/57.jpg"/> <img alt="28.jpg" src="content/proyectos/fractales/images/58.jpg"/></p>
+	<p>Como sabemos, los fractales se forman por una "repetición de una imagen" (como definición simple y no muy acertada, pero que nos sirve para entender el ejemplo). La técnica de compresión consiste pues, en transformar una serie de píxeles en una fórmula, de modo que al descomprimir nuestra imagen, la fórmula se desarrollase para rellenar todos los píxeles que se habían transformado en fórmula. De este modo se reduce el tamaño físico de la imagen, aunque al cargarla haya que llevar a cabo un mayor procesamiento.</p>
+	<p>Como ya mencionábamos antes, a parte de en imágenes simples, esto se ha llevado a cabo en vídeos y videojuegos, que cada vez requieren más procesamiento a cambio de una reducción del uso de la memoria física.</p>
+	<p>Esto también es muy útil para la navegación por sitios Web, puesto que no todas las conexiones poseen demasiada velocidad de transferencia. Así pues, reduciendo el tamaño de las imágenes colgadas en Internet se obtiene una mayor velocidad de transmisión, y por lo tanto una navegación más ligera.</p>
+	<h3>Medicina</h3>
+	<p>Aunque puede parecer increíble, los fractales también se han abierto paso en el campo de la medicina. Se está estudiando, desde virus fractales hasta la ramificación de determinados tumores malignos, por lo que llegando a confirmarse la teoría y avanzando los estudios podrían curarse estos tumores.</p>
+	<p>También se han llegado a utilizar técnicas fractales para predecir la osteoporosis de los pacientes, dolorosa enfermedad que afecta a los huesos de algunas personas, normalmente de la tercera edad, con una clara deficiencia de calcio en los huesos. Normalmente, la osteorporosis no se llega a detectar hasta bien avanzada la enfermedad, que es cuando se produce una alteración visible en la textura ósea.</p>
+	<p>Usando técnicas fractales, se puede detectar previamente esta enfermedad. Mediante un programa informático, se almacena una muestra de la textura ósea de una persona en estado normal. Más adelante se volvía a tomar otra muestra, ya de una persona propensa a sufrir la enfermedad y se comparaban ambas muestras. Como la textura ósea guarda una estrecha relación con un fractal, se pude predecir cómo evolucionará esa textura, pudiendo así diagnosticarse con antelación y tomar las medidas oportunas para que no siga evolucionando.</p>
+	<p>Por otro lado, se estudia el funcionamiento del cerebro, para poder localizar un tumor o el daño producido por diversas enfermedades o el consumo de drogas. Son muchas las nuevas tecnologías que se aplican al campo de la medicina, como por ejemplo los escáneres que realizan una resonancia magnética nuclear, tomando imágenes en 2 dimensiones para posteriormente transformarlas a 3 dimensiones y así conocer mejor la estructura interna de los órganos. Estas imágenes aportan información a la investigación sobre que el cerebro posee una estructura fractal. Conforme se va amplificando la visión del cerebro se van encontrando más y más detalles, y las estructuras más pequeñas se parecen a las más grandes (es decir, posee una autosimilitud). El cerebro tiene estructura fractal. La dimensión fractal de la superficie del cerebro es mayor que 2, lo que implica que esta superficie necesita más espacio para llenarse, no es suficiente con dimensión igual a 2.
+	<img alt="59.jpg" src="content/proyectos/fractales/images/59.jpg"/></p>
+	<p>Otra aplicación que se lleva a cabo en la actualidad es la regeneración del tejido de la piel. También está en fase de investigación la posible regeneración de órganos completos para utilizarlos en los transplantes. El problema fundamental se basa en diseñar una estructura, similar al sistema circulatorio en la que apoyar las células en crecimiento del órgano.</p>
+	<p>Y para acabar, comentar que también se estudia una relación similar entra la estructura de los conductos sanguíneos del cuerpo humano y los fractales.</p>
+	<h3>Geografía</h3>
+	<p>Otro de los campos en los que son usados los fractales es el de la geografía. La primera de las aplicaciones que se da es el cálculo del camino más cercano o acertado entre dos puntos. Para ello se ha utilizado bastante la curva de Koch. La utilidad real de esto es para el campo de la exploración espacial, puesto que en un insignificante error de cálculo a escalas diferentes, puede implicar millones de kilómetros de error.</p>
+	<p>Quizás la manera más útil de aplicar los fractales en la geografía sea elaborando mapas en tres dimensiones, muy detallados, lo que lleva a una imagen prácticamente real en comparación con al forma de nuestro planeta.</p>
+</div>
+
+<h2 class="titulo">Enlaces</h2>
+<div class="contenido">
+	<h3>Teoría</h3>
+	<ul>
+		<li><a href="http://ucua.ujaen.es/jnavas/lfractales/CursoGeometriaFractal.pdf">Introducción a la geometría fractal, por Juan Pablo Braña, miembro del proyecto Fractaltec (Proyecto Libre de Investiación en Matemática Fractal y Teoría del Caos)</a></li>
+		<li><a href="http://en.wikipedia.org/wiki/Fractal">Fractales en la Wikipedia</a></li>
+		<li><a href="http://ucua.ujaen.es/jnavas/fractal.html">Fractales y biología, sección dedicada a tal propósito en la web de Juan Navas, profesor titular del Departamento de Matemáticas de la Universidad de Jaén</a></li>
+		<li><a href="http://www.fractales.org/">Textos informativos sobre diversos conceptos de los fractales y de la teoría del caos</a></li>
+		<li><a href="http://omega.ilce.edu.mx:3000/sites/ciencia/volumen3/ciencia3/147/htm/fractus.htm">Información completa sobre fractales</a></li>
+		<li><a href="http://hypertextbook.com/chaos/">Todo sobre la teoría del caos</a></li>
+		<li><a href="http://www.ma.hw.ac.uk/solitons/">Web del proyecto de investigación sobre solitotes, del Departamento de Matemáticas de la <em>"Heiot-Watt University"</em> de Edimburgo</a></li>
+	</ul>
+	<h3>Arte Fractal</h3>
+	<ul>
+		<li><a href="http://www.fractal-vibes.com/fvc/music/gingerbread.html">Galería de música fractal creada con Gingerbread</a></li>
+		<li><a href="http://fractalmusician.com/">Diversos recursos sobre música fractal, como enlaces a descargas de los principales programas de creación de música fractal y ejemplos de composiciones generadas con estos</a></li>
+		<li><a href="http://ericbigas.com/fractals/">Videos fractales</a></li>
+		<li><a href="http://www.parkenet.org/jp/galleries.html">Galería de imágenes fractales en parkenet.org</a></li>
+		<li><a href="http://www.fractalus.com/">Galería de imágenes fractales en fractalus.com</a></li>
+		<li><a href="http://sprott.physics.wisc.edu/fractals/">Galería de imágenes fractales en sprott.physics.wisc.edu</a></li>
+	</ul>
+	<h3>Aplicaciones de los fractales</h3>
+	<ul>
+		<li>En computación:
+		<ul>
+			<li><a href="http://www.cnice.mecd.es/eos/MaterialesEducativos/mem2000/matefoto/libro/intro/intro.htm">Introducción a los fractales y a la compresión fractal</a></li>
+			<li><a href="http://www.oni.escuelas.edu.ar/olimpi99/fractales/compre.htm">Compresión fractal</a></li>
+		</ul></li>
+		<li>En medicina:
+		<ul>
+			<li><a href="http://www.npac.syr.edu/projects/vishuman/">The visible human proyect</a></li>
+		</ul></li>
+		<li>En geografía:
+		<ul>
+			<li><a href="http://www.fisica.unam.mx/naumis/index_archivos/fractales.htm">Los fractales: una nueva geometría para descubrir el espacio</a></li>
+		</ul></li>
+	</ul>
+	<h3>Software</h3>
+	<ul>
+		<li>Fractint
+		<ul>
+			<li><a href="http://spanky.triumf.ca/www/fractint/fractint.html">Sitio oficial</a></li>
+			<li><a href="http://areafractal.tierradenomadas.com/fctint.html">Tutorial</a></li>
+			<li><a href="http://home.att.net/~Paul.N.Lee/FotD/FotD.html">Galería en home.att.net</a></li>
+			<li><a href="http://www.les.stclair.btinternet.co.uk/fractals/fractin1.htm">Galería en les.stclair.btinternet.co.uk</a></li>
+		</ul></li>
+		<li>Ultra Fractal
+		<ul>
+			<li><a href="http://www.ultrafractal.com/">Sitio oficial</a></li>
+			<li><a href="http://users.pandora.be/jan.vyvey1/fractals.htm">Galería</a></li>
+			<li><a href="http://www.ultrafractal.com/resources.html">Otros recursos del programa</a></li>
+		</ul></li>
+		<li><a href="http://www.eclectasy.com/Fractal-Explorer/">Fractal Explorer</a></li>
+		<li>Tierazon
+		<ul>
+			<li><a href="http://home.houston.rr.com/fergusonsc/Tierazon-v29/">Sitio oficial</a></li>
+			<li><a href="http://www.fractalarts.com/ASF/Tutor1.html">Tutorial</a></li>
+		</ul></li>
+		<li><a href="http://www.chaospro.de/">Chaos Pro</a></li>
+		<li><a href="http://astronomy.swin.edu.au/~pbourke/fractals/fracdim/">Frac Dimension Calculador (programa que nos permite calcular la dimensión de un fractal)</a></li>
+		<li><a href="http://reglos.de/musinum/">Musinum</a></li>
+		<li><a href="http://www.geocities.com/CapeCanaveral/Launchpad/5113/fr39/fr39.htm#The%20Well-Tempered%20Fractal">The Well Tempered Fractal</a></li>
+		<li><a href="http://www.geocities.com/Athens/Academy/8764/lmuse/lmuse.html">Lmuse</a></li>
+	</ul>
+	<h3>Otros enlaces interesantes</h3>
+	<ul>
+		<li><a href="http://www.arrakis.es/~sysifus/index.html">Recuros fractales</a></li>
+		<li><a href="http://www.fractales.org/">Más recursos</a></li>
+		<li><a href="http://www.geocities.com/capecanaveral/cockpit/5889/">Todo sobre los fractales</a></li>
+	</ul>
+</div>
+
+<h2 class="titulo">Bibliografía</h2>
+<div class="contenido">
+	<ul>
+		<li><a href="http://www.fractaltec.org/">Fractaltec</a></li>
+		<li><a href="http://www.dlsi.ua.es/~japerez/">Juan Antonio Perez Ortiz</a></li>
+		<li><a href="http://www.dlsi.ua.es/~japerez/">Fractales (Matemática de belleza infinita)</a></li>
+		<li><a href="http://ucua.ujaen.es/jnavas/fractal.html">Juan Navas Ureña y Jose María Quesada Teruel</a></li>
+		<li><a href="http://www.arrakis.es/~sysifus/">Area fractal</a></li>
+		<li><a href="http://wikipedia.org/">Wikipedia</a></li>
+	</ul>
+</div>
+
+	</div>
+	<div id="footer">
+		<small><a href="index.html">En el Nombre de Tux</a> &bull; <a href="indexe61b.html?section=QuienesSomos">Quienes somos</a> &bull; <a href="index733c.html?section=FAQ">FAQ</a></small><br />
+		<p>
+			<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/"><img alt="Creative Commons License" style="border:0;" src="templates/default/images/cc.png"/></a>
+			<a href="http://validator.w3.org/check?uri=referer"><img style="border:0;width:88px;height:31px" src="templates/default/images/vxhtml.png" alt="XHTML Válido" /></a>
+			<a href="http://jigsaw.w3.org/css-validator/check?uri=referer"><img style="border:0;width:88px;height:31px" src="templates/default/images/vcss.gif" alt="CSS Válido" /></a>
+		</p>
+	</div>
+</div>
+<!-- Google Analytics -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' 
+type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-1625957-5");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<!-- Fin Google Analytics -->
+</body>
+
+<!-- Mirrored from www.enelnombredetux.com/project.php?project=fractales&mode=accordion by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 05 Feb 2017 18:10:55 GMT -->
+</html>
+

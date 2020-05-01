@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from www.enelnombredetux.com/project.php?project=estegan&mode=accordion by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 05 Feb 2017 18:10:55 GMT -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="alternate" type="application/rss+xml" title="eendt blog RSS feed" href="http://feeds.feedburner.com/eendtblog" />
+	<title>﻿Esteganograf&iacute;a sobre video &bull; Proyectos &bull; En el Nombre de Tux</title>
+	<link rel="stylesheet" href="templates/default/style.css" type="text/css" media="screen" />
+	<link rel="shortcut icon" href="templates/default/images/favicon.ico" />
+	<script type="text/javascript" src="includes/js/mootools.js"></script>
+	<script type="text/javascript" src="includes/js/validatecontactform.js"></script>
+	<script type="text/javascript">Window.onDomReady(function(){ var ac = new Fx.Accordion($$('.titulo'), $$('.contenido'),{alwaysHide: true}); });</script></head>
+<body>
+<div id="all">
+	<div id="header">
+		<div align="right"><a href="index.html"><img src="templates/default/images/cabecera.png" alt="Cabecera" /></a></div>
+	</div>
+	<div id="menu">
+		<ul>
+			<li><a class="off" href="index0128.html?section=Portada">Portada</a></li>
+			<li><a class="off" href="index26e2.html?section=Blog">Blog</a></li>
+			<li><a class="off" href="indexf7f9.html?section=Proyectos">Proyectos</a></li>
+			<li><a class="off" href="indexf6dd.html?section=Art%c3%adculos">Artículos</a></li>
+			<li><a class="off" href="indexc34d.html?section=Licencia">Licencia</a></li>
+			<li><a class="off" href="indexc77a.html?section=Contactar">Contactar</a></li>
+		</ul>
+	</div>
+	<div id="content">
+<div class="cab" style="width: 960px; height: 200px; margin: 30px 0 0 0; background: url('content/proyectos/estegan/images/projectlogo.jpg');"></div><p style="text-align:right; font-size:0.8em; color:#898989;"><strong>Autor/es:</strong> Jesús R. Peinado, Óscar Sánchez del Árbol, Carlos Martínez de la Cruz, Salvador Gutiérrez Salcedo, Alvaro Cantos Carrillo<br /><strong>Última revisión:</strong> Noviembre de 2010<br/><a class="changemodeurl" href="project89bb.html?project=estegan">Ver texto continuo</a></p>﻿	<h2 class="titulo">Introducci&oacute;n</h2>
+	<div class="contenido">
+		<p>La esteganografia es una tecnica criptografica por la cual se puede ocultar informacion u objetos en otros sin que se pueda percibir su presencia</p>
+	</div>
+	<h2 class="titulo">Formato OGG</h2>
+	<div class="contenido">
+
+		<p>Ogg es un formato de archivo contenedor multimedia capaz de almacenar datos de vídeo, audio, subtítulos, secciones, escenas y meta-datos (autores, fechas de modificación, etc). Desarrollado de principio a fin por la fundación Xiph.org, es un formato libre de patentes, y orientado a la reproducción de códecs multimedia como Theora, Vorbis, FLAC, Speex o IceCast (desarrollados también por Xiph.org).</p>
+		<p>Por tanto, la elección del formato no ha sido a la ligera: el hecho de ser un formato libre, tener detrás una gran comunidad y una fundación en continuo movimiento, hace que la documentación sea suficientemente amplia y adecuada; además, la posibilidad de trabajar con un formato de compresión alto y orientado al streaming hace que el interprete (la reproducción) sea más flexible.</p>
+	</div>
+	
+	<h2 class="titulo">Estructura del archivo</h2>
+	<div class="contenido">
+		<p><strong>	Estructura lógica</strong></p>
+		<p>La estructura lógica de un fichero ogg está estructurado en paquetes, vectores codificados en crudo, es decir, sin formato. ¿Por qu&eacute; no lleva un formato? Digamos que así es mucho más simple trasmitir datos en streaming, debido a que el formato no se corrompe con facilidad.
+		<p>Los paquetes se agrupan en páginas lógicas, que a su vez forman un bitstream lógico. Estos bitstream lógicos se agrupan en bitstream físicos, multiplexando a nivel de página los bitstream lógicos y añadiendo (de forma opcional) una cabecera que sirve como identificación.</p>
+		<p><strong>	Estructura fisica</strong></p>
+		<p>Nos centraremos principalmente en la estructura física. Un fichero Ogg es al fin y al cabo un contenedor multimedia estructurado en páginas. Cada una de estas páginas, de tamaño variable, tiene una cabecera y los datos en bruto, sin estructura física (aunque como vimos anteriormente se estructura lógicamente en paquetes).</p>
+		<p>La cabecera de cada página tiene el siguiente formato.</p>
+		<p><i>Cabecera</i></p>
+		<ul>
+			<li>4 bytes, para la identificar que es una página de Ogg, y que siempre tienen el valor “OggS”.</li>
+			<li>1 byte, de versión.</li>
+			<li>1 byte, indicador de colocación dentro del bitstream.</li>
+			<li>6 bytes, posición absoluta de los datos, que coincide con el total de muestras codificadas 	(incluyendo todos los paquetes de la página a la que corresponde la cabecera).</li>
+			<li>4 bytes, número identificador del bitstream lógico.</li>
+			<li>4 bytes, un contador de páginas (usado para comprobar que no se escapó ninguna página).</li>
+			<li>4 bytes, CRC, comprobación de errores; se realiza sobre la totalidad de la cabecera y los 	datos de la página.</li>
+		</ul>
+		<p><i>Indice</i></p>
+		<ul>	
+			<li>1 byte, indica el número de paquetes de la página</li>
+			<li>En adelante, habrá un byte por cada paquete (habrá tantos bytes en este índice indica el byte anterior) que contiene el tamaño de cada paquete. El máximo, por tanto, que podrá contener cada paquete será 255 bytes, o lo que es lo mismo: FF.</li>
+		</ul>
+		<p>Digamos entonces que tanto las páginas, los paquetes y las cabeceras de cada página, son de tamaño variable. Es decir, no hay una medida fija ni en el tamaño de las páginas, ni dentro de los paquetes o la estructura de estos, lo que hace que para saber la posición que se ocupa en cada lectura del archivo, sea necesario leer los indices de las páginas e ir realizando los cálculos, ya que la estructura de los datos de los paquetes de cada página están en crudo, es decir, de forma secuencial sin formato concreto.</p>
+	</div>
+	<h2 class="titulo">Codec</h2>
+	<div class="contenido">
+		<p>Hemos descubierto que modificando físicamente el archivo a nivel de página e introduciendo nuevas páginas no es necesario contemplar el códec. Gracias a esto no tenemos que preocuparnos de los posibles efectos que tendrá la introducción de código en los nuevos archivos, ya que el códec los considerará basura y no los tendrá en cuenta en la reproducción.</p>
+		<p><strong>	Vorbis</strong></p>
+		<p>Vorbis es un códec de audio perceptivo de fines generales previsto para permitir flexibilidad máxima del codificador, permitiéndole escalar competitivamente sobre una gama excepcionalmente amplia de bitrates. Ogg Vorbis es totalmente abierto, libre de patentes y de regalías; la biblioteca de referencia (libVorbis) se distribuye bajo una licencia tipo BSD por lo que cualquiera puede implementarlo ya sea tanto para aplicaciones propietarias como libres.</p>
+		<p>El uso de Ogg Vorbis ha crecido a gran velocidad en los últimos años desde su refinamiento hace unos seis años (en 2004). Aplicaciones de streaming audio como Spotify utilizan el formato Ogg en versión Premium, mientras que un buen número de sitios web, como Jamendo o el bloque de la fundación WikiMedia (Wikipedia, Wiki Commons, etc) llevan usando Vorbis desde sus inicios.</p>
+		<p>En la industria del videojuego también ha sido usado ampliamente para los eventos in-game en tiempo real, donde la velocidad de trasmisión de audio y su coherencia es vital.</p>	
+		<p>En cuanto a los metadatos, Vorbis crea una cabecera en los paquetes codificados (para Ogg son código en bruto que almacena – como ya dijimos, Ogg simplemente almacena datos en bruto y es el reproductor quien interpreta) que contiene una serie de metadatos, llamados Vorbis Comments. Estos metadatos a nosotros no nos afectarán, puesto que no los tocaremos, pero es lícito indicar que son muy parecidos a los metadatos ID3 estándar del MP3. Al igual que ID3, los Vorbis Comments son un vector  de octetos de tamaño indeterminado y codificadas en UTF-8, donde las etiquetas relativas al contenido van en formato “[ETIQUETA]=[VALOR]”.</p>
+		<p><strong>	Theora</strong></p>
+		<p>Theora es un códec de vídeo de propósito general con bajo consumo de CPU. Esta basado en el códec de vídeo VP3 producido por On2 Technologies quien donó el código fuente del VP3.1 a la Fundación Xiph.org quién lo publicó bajo la licencia BSD revisada de 3 cláusulas.</p>
+		<p>Aunque VP3 es tecnología patentada, On2 ha renunciado irrevocablemente a todos los derechos y patentes que tenía sobre éste enseptiembre del 2001. En junio de 2002, On2 Technologies y la Fundación Xiph.org anunciaron una alianza para desarrollar Ogg Theora: la integración de VP3 con el proyecto Ogg y Vorbis.</p>
+		<p>El objetivo es la posibilidad de tener ficheros Ogg, donde Theora actúa como la capa de vídeo, mientras que Vorbis actúa generalmente como la capa de audio (Speex y FLAC también pueden actuar como capas de audio). Esto permite trabajar con audio y vídeo sin tener que maniobrar con formatos cerrados y/o de pago, es decir, teniendo una alternativa libre y competitiva a los formatos del grupo MPEG-4 del Consorcio MPEG.</p>
+	</div>
+	<h2 class="titulo">M&eacute;todo</h2>
+	<div class="contenido">
+		<p><strong>	Consideraciones iniciales</strong></p>
+		<p>Desde un principio nos centramos en la posibilidad de introducir el código a ocultar en nuevas páginas que crearemos entre las páginas ya creadas. Es decir, particionaremos el archivo a ocultar y cada fragmento lo meteremos en una nueva página que colocaremos entre dos páginas del archivo anfitrión.</p>
+		<p>Esto es posible porque como decíamos, no es necesario contemplar el códec de audio o video para introducir datos en el archivo. Esto se debe a que Ogg no lee una página si no los datos contenidos en este no tienen una cabecera Ogg (como la que definimos anteriormente); si no la cumple ni siquiera lo tiene en cuenta al formar el índice del archivo, con lo que podemos introducir trozos de código sin que se altere el video o el audio.</p>
+		<p>Los únicos efectos que tiene sobre el archivo son:</p>
+		<ul>
+			<li>El tamaño del archivo se altera, por lo que si el tamaño del archivo o código introducido es alto, el tamaño se incrementará tanto que será perceptible.</li>
+			<li>La reproducción: si se introducen datos de forma compacta (es decir, trazas de código grandes en páginas nuevas o al final de páginas ya existentes) el reproductor lo notará, dando saltando un trozo de la barra de desplazamiento temporal de reproducción.</li>
+		</ul>
+		<p>El primer problema trataremos de solucionarlo limitando el tamaño del archivo a introducir respecto del tamaño original del archivo anfitrión, y advirtiendo si el usuario que se notará si desea continuar. Así mismo intentaremos comprimir el archivo huésped para tratar de minimizar este problema.</p>
+		<p>El segundo problema solo podemos tratar de minizarlo haciendo que las páginas sean de tamaño mínimo y repartiendo bien esas páginas entre todas las que ya estaban en el archivo anfitrión. Así los saltos que den, serán mínimos y en un tamaño aceptable, serán imperceptibles.</p>
+		<p></p>
+	</div>
+	
+	<h2 class="titulo">Consideraciones finales</h2>
+	<div class="contenido">
+		<p>Pese a las intenciones relativas a la creación de páginas intermedias y realizar un reparto de las mismas, hemos encontrado problemas al implementar este método, puesto que los reproductores de audio / vídeo no analizaban correctamente el archivo Ogg y, variando el reproductor y el sistema operativo, o bien se reproducía el archivo pero sin ningún sonido, o el software reproductor colapsaba inmediatamente.</p>
+		<p>El código fuente adjunto introduce páginas de datos al final del archivo multimedia, algo que sí es capaz de ser reproducido por cualquier software. Usando este método, si aumentamos mucho el tamaño del archivo a ocultar hay cambios perceptibles en la barra de reproducción (justo al final), aunque el formato es descodificado sin problema. Ocultar archivos de poco tamaño no supone ningún problema perceptivo a la hora de reproducir el Ogg contenedor con los datos ya ocultos.</p>
+	</div>
+	<h2 class="titulo">Aplicaci&oacute;n</h2>
+	<div class="contenido">
+		<p>Con motivo del estudio de la posibilidad de realizar tecnicas esteganograficas sobre video en OGG, se ha desarrollado una aplicaci&oacute;n para demostrar las posibilidades formadas a partir de conclusiones anteriores.</p>
+		<p>El código fuente ha sido desarrollado en C++ usando la librería gráfica multiplataforma Qt y sobre Mac OS X 10.5.8. La librería está disponible, de forma gratuita, en el siguiente enlace: <a href="http://qt.nokia.com/downloads">http://qt.nokia.com/downloads</a> Se adjunta también un ejecutable ("Bundle") ya compilado para Mac OS X.</p>
+		<p>Es necesario descargar el framework de Qt para la ejecución del software. Para desplegar el proyecto fácilmente (usando el IDE de Qt, Qt Creator) abrir el archivo EstaganOgg.pro con éste entorno.</p>
+		<p><a href="content/proyectos/estegan/app/esteganOgg.rar">Enlace de descarga.</a></p>
+	</div>
+
+</div>
+</div>
+
+	</div>
+	<div id="footer">
+		<small><a href="index.html">En el Nombre de Tux</a> &bull; <a href="indexe61b.html?section=QuienesSomos">Quienes somos</a> &bull; <a href="index733c.html?section=FAQ">FAQ</a></small><br />
+		<p>
+			<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/"><img alt="Creative Commons License" style="border:0;" src="templates/default/images/cc.png"/></a>
+			<a href="http://validator.w3.org/check?uri=referer"><img style="border:0;width:88px;height:31px" src="templates/default/images/vxhtml.png" alt="XHTML Válido" /></a>
+			<a href="http://jigsaw.w3.org/css-validator/check?uri=referer"><img style="border:0;width:88px;height:31px" src="templates/default/images/vcss.gif" alt="CSS Válido" /></a>
+		</p>
+	</div>
+</div>
+<!-- Google Analytics -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' 
+type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-1625957-5");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<!-- Fin Google Analytics -->
+</body>
+
+<!-- Mirrored from www.enelnombredetux.com/project.php?project=estegan&mode=accordion by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 05 Feb 2017 18:10:55 GMT -->
+</html>
+

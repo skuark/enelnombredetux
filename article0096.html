@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from www.enelnombredetux.com/article.php?article=spam&#38 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 05 Feb 2017 18:10:58 GMT -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="alternate" type="application/rss+xml" title="eendt blog RSS feed" href="http://feeds.feedburner.com/eendtblog" />
+	<title>﻿Métodos alternativos para prevenir el Spam &bull; Artículos &bull; En el Nombre de Tux</title>
+	<link rel="stylesheet" href="templates/default/style.css" type="text/css" media="screen" />
+	<link rel="shortcut icon" href="templates/default/images/favicon.ico" />
+	<script type="text/javascript" src="includes/js/mootools.js"></script>
+	<script type="text/javascript" src="includes/js/validatecontactform.js"></script>
+	</head>
+<body>
+<div id="all">
+	<div id="header">
+		<div align="right"><a href="index.html"><img src="templates/default/images/cabecera.png" alt="Cabecera" /></a></div>
+	</div>
+	<div id="menu">
+		<ul>
+			<li><a class="off" href="index0128.html?section=Portada">Portada</a></li>
+			<li><a class="off" href="index26e2.html?section=Blog">Blog</a></li>
+			<li><a class="off" href="indexf7f9.html?section=Proyectos">Proyectos</a></li>
+			<li><a class="off" href="indexf6dd.html?section=Art%c3%adculos">Artículos</a></li>
+			<li><a class="off" href="indexc34d.html?section=Licencia">Licencia</a></li>
+			<li><a class="off" href="indexc77a.html?section=Contactar">Contactar</a></li>
+		</ul>
+	</div>
+	<div id="content">
+<h1>Métodos alternativos para prevenir el Spam</h1><p style="text-align:right; font-size:0.8em; color:#898989;"><strong>Autor/es:</strong> Jesús R. Peinado<br/><a class="changemodeurl" href="articlebf34.html?article=spam&amp;mode=accordion">Ver texto en modo acordeón</a></p>﻿	<h2 class="titulo">Métodos alternativos para prevenir el Spam</h2>
+	<div class="contenido">
+
+		<img style="float:right; margin:5px;" title="cap-gmail-captcha-01" src="http://blog.jesusr.es/wp-content/cap-gmail-captcha-01-300x246.png" alt="cap-gmail-captcha-01" width="210" height="172" />
+
+		<p>Si pensamos en el spam que nos llega a través de los formularios, nos daremos cuenta de que la cantidad es enorme: formularios de contacto, comentarios, foros, etc. La inmensa mayoría de las veces, la solución para evitar este Spam es usar los famosos Captchas.</p>
+
+<strong>Captcha</strong> es el acrónimo de <em>"Completely Automated Public Turing test to tell Computers and Humans Apart</em>" (Prueba de Turing pública y automática para diferenciar máquinas y humanos). La típica prueba consiste en que el usuario introduzca un conjunto de caracteres que se muestran en una imagen distorsionada que aparece en pantalla. Y para que engañarnos, son un coñazo. Pero para diferenciar entre máquinas y humanos, y así evitar el spam masivo  en un formulario web hay muchos otros métodos interesantes.
+
+<h2>En CSS</h2>
+
+<p>El primero de ellos <strong>basado en CSS</strong>; un robot no visualiza el codigo CSS, por lo que si colocamos un campo como "display: none" (es decir, ya no lo vemos) y nos llega una petición del formulario que haya rellenado el campo invisible, sabremos entonces que es un robot, y por tanto no aceptaremos la petición.</p>
+<em> Ejemplo:</em>
+<p style="padding-left: 30px;">En el css:
+<span style="font-family: monospace;">.noshow { display:none; }</span></p>
+<p style="padding-left: 30px;">En el html</p>
+<p style="padding-left: 30px;"><span style="font-family: monospace;">&lt;label for="leaveblank"&gt;Leave this blank&lt;/label&gt;
+&lt;input type="text" id="leaveblank" name="leaveblank" /&gt;&lt;br /&gt;
+&lt;label for="dontchange"&gt;Do not change this&lt;/label&gt;
+&lt;input type="text" value="http://" id="dontchange" name="dontchange" /&gt;</span></p>
+
+<pre style="padding-left: 30px;"><span style="font-family: monospace;">//Si alguno de estos dos campos son modificados, sabremos que es un bot.</span></pre>
+<pre style="padding-left: 30px;"><span style="font-family: monospace;">En el php:</span></pre>
+<p style="padding-left: 30px;"><code>if ($_POST['leaveblank'] == '' &amp;&amp; $_POST['dontchange'] == 'http://') {
+// accept form submission
+}</code></p>
+
+<h2>En PHP</h2>
+
+También existe <strong>un método basado directamente en PHP</strong>, siguiendo el mismo modelo.
+
+<em>Ejemplo:</em>
+<p style="padding-left: 30px;">En el php:</p>
+<p style="padding-left: 30px;"><code>// You can use the date() function to change field names periodically:
+// For daily changes, use e.g.:
+$code = date('Yz'); // Don't copy this 1:1 - adjust the date parameters. (Y:year. z:day of the year)
+$html = "&lt;input type='text' id='abc$code' name='abc$code' /&gt;\n";
+if (!isset($_POST["abc$code"]) {
+// reject form submission
+}</code></p>
+
+<h2>En la Base de Datos</h2>
+
+Existe <strong>un método más basado en Bases de datos</strong>; que lo que hace es grabar la hora y día en que una ip envía un formulario, evitando que esa ip cargue dicho formulario más de una vez cada dos minutos. Esto evita que no entre en un ciclo de envíos incondicionales, que es al fin y al cabo lo que hace el spam.
+
+<em>Ejemplo:</em>
+<code> </code>
+<p style="padding-left: 30px;">En la base de datos:</p>
+<p style="padding-left: 30px;"><code>CREATE TABLE `spam` (
+`ip` int(10) unsigned default NULL,
+`timestamp` timestamp NOT NULL,
+KEY `ip` (`ip`));</code></p>
+<p style="padding-left: 30px;">En el php:</p>
+<p style="padding-left: 30px;"><code>$ip = $_SERVER['REMOTE_ADDR'];
+// when you reject a form submission:
+mysql_query("INSERT INTO `spam` SET `ip`=INET_ATON('$ip');");
+// whenever somebody opens the page:
+mysql_query("SELECT `timestamp` FROM `spam` WHERE ip=INET_ATON('$ip') ORDER BY `timestamp` DESC LIMIT 1;");
+if (time() - $timestamp &lt; 120) { // 2 minutes
+// display error message: try again in 2 minutes
+}
+else {
+// display HTML form
+}</code></p>
+<p style="padding-left: 30px;"></p>
+Estos tres métodos son sencillísimos de aplicar y muy útiles.
+
+Si aplicáis alguno, ¡contadme que tal va!
+
+Fuentes: <a href="http://www.landauer.at/preventing-spam-in-form-submissions-without-using-a-captcha.php" target="_blank">1</a> y <a href="http://es.wikipedia.org/wiki/Captcha" target="_blank">2</a> Vía <a href="http://twitter.com/aNieto2k/status/7917915810" target="_blank">3</a>
+
+	
+	</div>
+	</div>
+	<div id="footer">
+		<small><a href="index.html">En el Nombre de Tux</a> &bull; <a href="indexe61b.html?section=QuienesSomos">Quienes somos</a> &bull; <a href="index733c.html?section=FAQ">FAQ</a></small><br />
+		<p>
+			<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/"><img alt="Creative Commons License" style="border:0;" src="templates/default/images/cc.png"/></a>
+			<a href="http://validator.w3.org/check?uri=referer"><img style="border:0;width:88px;height:31px" src="templates/default/images/vxhtml.png" alt="XHTML Válido" /></a>
+			<a href="http://jigsaw.w3.org/css-validator/check?uri=referer"><img style="border:0;width:88px;height:31px" src="templates/default/images/vcss.gif" alt="CSS Válido" /></a>
+		</p>
+	</div>
+</div>
+<!-- Google Analytics -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' 
+type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-1625957-5");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<!-- Fin Google Analytics -->
+</body>
+
+<!-- Mirrored from www.enelnombredetux.com/article.php?article=spam&#38 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 05 Feb 2017 18:10:58 GMT -->
+</html>
+
